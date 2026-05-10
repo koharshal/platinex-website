@@ -9,9 +9,7 @@ import { siteConfig } from './src/data/site.config'
 export default defineConfig({
 	site: siteConfig.site,
 	output: 'static',
-	image: {
-		service: { entrypoint: 'astro/assets/services/noop' }
-	},
+
 	markdown: {
 		remarkPlugins: [remarkReadingTime],
 		drafts: true,

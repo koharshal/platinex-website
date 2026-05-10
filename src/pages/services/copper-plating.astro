@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import CheckIcon from '../../components/icons/CheckIcon.astro'
+import { Image } from 'astro:assets'
 import copperImage from '../../assets/images/copper_plated_bus_bars.png'
 
 const serviceSchema = {
@@ -81,10 +82,14 @@ const serviceSchema = {
 						</div>
 					</div>
 					<div class='flex-1 w-full min-h-[300px] relative'>
-						<img
-							src={copperImage.src}
+						<Image
+							src={copperImage}
 							alt='Copper plated bus bars and electrical components at Platinex Industries Nashik'
 							class='absolute inset-0 w-full h-full object-cover'
+							width={600}
+							height={400}
+							loading='eager'
+							fetchpriority='high'
 						/>
 					</div>
 				</div>

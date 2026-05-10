@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import CheckIcon from '../../components/icons/CheckIcon.astro'
+import { Image } from 'astro:assets'
 import nickelImage from '../../assets/images/nickel_plating_components.png'
 
 const serviceSchema = {
@@ -73,10 +74,14 @@ const serviceSchema = {
 						</div>
 					</div>
 					<div class='flex-1 w-full min-h-[300px] relative'>
-						<img
-							src={nickelImage.src}
+						<Image
+							src={nickelImage}
 							alt='Precision nickel plated industrial components at Platinex Industries Nashik'
 							class='absolute inset-0 w-full h-full object-cover'
+							width={600}
+							height={400}
+							loading='eager'
+							fetchpriority='high'
 						/>
 					</div>
 				</div>

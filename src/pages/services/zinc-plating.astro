@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import CheckIcon from '../../components/icons/CheckIcon.astro'
+import { Image } from 'astro:assets'
 import zincImage from '../../assets/images/zinc_plating_hardware.png'
 
 const serviceSchema = {
@@ -73,10 +74,14 @@ const serviceSchema = {
 						</div>
 					</div>
 					<div class='flex-1 w-full min-h-[300px] relative'>
-						<img
-							src={zincImage.src}
+						<Image
+							src={zincImage}
 							alt='Zinc plated hardware and fasteners with trivalent passivation at Platinex Industries Nashik'
 							class='absolute inset-0 w-full h-full object-cover'
+							width={600}
+							height={400}
+							loading='eager'
+							fetchpriority='high'
 						/>
 					</div>
 				</div>
