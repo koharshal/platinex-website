@@ -18,7 +18,87 @@ const titleSeparator = '•'
 
 const siteTitle = `${title} ${titleSeparator} ${siteConfig.title}`
 
-// Fonts are loaded via Google Fonts link tags below
+const isHomePage = Astro.url.pathname === '/'
+
+const localBusinessSchema = {
+	'@context': 'https://schema.org',
+	'@type': ['LocalBusiness', 'ManufacturingBusiness'],
+	name: 'Platinex Industries Private Limited',
+	description:
+		'Electroplating services including copper, nickel, zinc, and tin plating for electrical, switchgear, automobile, and electronics industries in Nashik, Maharashtra, India.',
+	url: 'https://platinex.in/',
+	telephone: '+918600146841',
+	email: 'platinexindustries@gmail.com',
+	image: 'https://platinex.in/open-graph.png',
+	logo: 'https://platinex.in/favicon.png',
+	address: {
+		'@type': 'PostalAddress',
+		streetAddress: 'Plot no. 156/3, Ambad-Vilholi MIDC Link Road, Vilholi',
+		addressLocality: 'Nashik',
+		addressRegion: 'Maharashtra',
+		postalCode: '422010',
+		addressCountry: 'IN'
+	},
+	geo: {
+		'@type': 'GeoCoordinates',
+		latitude: '20.0059',
+		longitude: '73.7903'
+	},
+	openingHoursSpecification: {
+		'@type': 'OpeningHoursSpecification',
+		dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+		opens: '00:00',
+		closes: '23:59'
+	},
+	priceRange: '₹₹',
+	areaServed: [
+		{ '@type': 'City', name: 'Nashik' },
+		{ '@type': 'State', name: 'Maharashtra' },
+		{ '@type': 'Country', name: 'India' }
+	],
+	hasOfferCatalog: {
+		'@type': 'OfferCatalog',
+		name: 'Electroplating Services',
+		itemListElement: [
+			{
+				'@type': 'Offer',
+				itemOffered: {
+					'@type': 'Service',
+					name: 'Copper Plating',
+					description:
+						'High-conductivity copper plating for bus bars, electrical components, and grounding parts. 3–30 µm, barrel process.'
+				}
+			},
+			{
+				'@type': 'Offer',
+				itemOffered: {
+					'@type': 'Service',
+					name: 'Nickel Plating',
+					description:
+						'Hard, arc-resistant nickel plating for fasteners, shafts, valves and connectors. 2–25 µm, bright/dull electrolytic.'
+				}
+			},
+			{
+				'@type': 'Offer',
+				itemOffered: {
+					'@type': 'Service',
+					name: 'Zinc Plating',
+					description:
+						'Sacrificial rust protection zinc plating with trivalent passivation for hardware, fasteners, and automotive parts. 2–12 µm.'
+				}
+			},
+			{
+				'@type': 'Offer',
+				itemOffered: {
+					'@type': 'Service',
+					name: 'Tin Plating',
+					description:
+						'Solderable tin plating for switchgear terminals and electrical contacts. 2–10 µm, bright/matte.'
+				}
+			}
+		]
+	}
+}
 ---
 
 <!-- Global Metadata -->
@@ -49,6 +129,16 @@ const siteTitle = `${title} ${titleSeparator} ${siteConfig.title}`
 <meta name='title' content={siteTitle} />
 <meta name='description' content={description} />
 <meta name='author' content={siteConfig.author} />
+<meta
+	name='keywords'
+	content='electroplating Nashik, plating supplier Nashik, copper plating India, nickel plating Nashik, zinc plating Maharashtra, tin plating switchgear, electroplating MIDC Nashik, metal finishing India, barrel plating Nashik, electroplating company India'
+/>
+
+<!-- Geo / Local SEO Meta -->
+<meta name='geo.region' content='IN-MH' />
+<meta name='geo.placename' content='Nashik' />
+<meta name='geo.position' content='20.0059;73.7903' />
+<meta name='ICBM' content='20.0059, 73.7903' />
 
 <!-- Open Graph / Facebook -->
 <meta property='og:type' content={articleDate ? 'article' : 'website'} />
@@ -56,6 +146,8 @@ const siteTitle = `${title} ${titleSeparator} ${siteConfig.title}`
 <meta property='og:title' content={title} />
 <meta property='og:description' content={description} />
 <meta property='og:image' content={socialImageURL} />
+<meta property='og:locale' content='en_IN' />
+<meta property='og:site_name' content='Platinex Industries' />
 {
 	articleDate && (
 		<>
@@ -74,3 +166,6 @@ const siteTitle = `${title} ${titleSeparator} ${siteConfig.title}`
 
 <!-- RSS auto-discovery -->
 <link rel='alternate' type='application/rss+xml' title={siteConfig.title} href='/rss.xml' />
+
+<!-- LocalBusiness Structured Data (JSON-LD) -->
+{isHomePage && <script type='application/ld+json' set:html={JSON.stringify(localBusinessSchema)} />}

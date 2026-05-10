@@ -10,13 +10,13 @@ interface SiteConfig {
 }
 
 export const siteConfig: SiteConfig = {
-	site: 'https://platinex.netlify.app/', // Will be updated to your actual Netlify URL
-	author: 'Platinex Industries Private Limited', // Site author
-	title: 'Platinex Industries - Best Electroplating Service in India', // Site title.
+	site: 'https://platinex.in/',
+	author: 'Platinex Industries Private Limited',
+	title: 'Platinex Industries — Electroplating Services in Nashik, India',
 	description:
-		'Copper, Zinc, Tin, Nickel & Silver Plating service for components in Electrical, Automobile, Capacitor and Electronics Industries. ', // Description to display in the meta tags
-	lang: 'en-GB',
-	ogLocale: 'en_GB',
-	shareMessage: 'Share this post', // Message to share a post on social media
-	paginationSize: 6 // Number of posts per page
+		'Platinex Industries offers precision copper, nickel, zinc, and tin electroplating services in Nashik MIDC for electrical, switchgear, automobile, and electronics industries. Fast 1-day turnaround with strict QA.',
+	lang: 'en-IN',
+	ogLocale: 'en_IN',
+	shareMessage: 'Share this post',
+	paginationSize: 6
 }

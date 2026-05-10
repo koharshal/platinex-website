@@ -1,0 +1,108 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+
+const services = [
+	{
+		title: 'Copper Plating',
+		slug: 'copper-plating',
+		description: 'High-conductivity copper plating for electrical components and bus bars.',
+		icon: 'Cu'
+	},
+	{
+		title: 'Nickel Plating',
+		slug: 'nickel-plating',
+		description:
+			'Hard, corrosion-resistant, and arc-resistant nickel plating for industrial parts.',
+		icon: 'Ni'
+	},
+	{
+		title: 'Zinc Plating',
+		slug: 'zinc-plating',
+		description: 'Sacrificial rust protection for ferrous parts with trivalent passivation.',
+		icon: 'Zn'
+	},
+	{
+		title: 'Tin Plating',
+		slug: 'tin-plating',
+		description: 'Highly solderable tin coating for terminals and switchgear contacts.',
+		icon: 'Sn'
+	}
+]
+---
+
+<BaseLayout
+	title='Our Electroplating Services — Copper, Nickel, Zinc & Tin'
+	description='Explore our range of precision electroplating services in Nashik, India. We specialize in copper, nickel, zinc, and tin plating for the electrical and automobile industries.'
+>
+	<div class='mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8 py-12'>
+		<div class='text-center mb-16'>
+			<h1
+				class='text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-stone-900 dark:text-white'
+			>
+				Industrial Plating Services
+			</h1>
+			<p class='text-lg text-stone-600 dark:text-stone-400 max-w-2xl mx-auto'>
+				High-quality metal finishing solutions tailored for the demanding requirements of the
+				electrical, switchgear, and automobile industries.
+			</p>
+		</div>
+
+		<div class='grid gap-8 md:grid-cols-2 lg:grid-cols-2'>
+			{
+				services.map((service) => (
+					<a
+						href={`/services/${service.slug}`}
+						class='group rounded-3xl border border-stone-200 dark:border-white/10 bg-white/70 dark:bg-white/5 p-8 hover:border-accent transition-all duration-300'
+					>
+						<div class='flex items-center gap-6'>
+							<div class='w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300'>
+								<span class='text-2xl font-bold text-accent'>{service.icon}</span>
+							</div>
+							<div>
+								<h2 class='text-2xl font-bold text-stone-900 dark:text-white mb-2 group-hover:text-accent transition-colors'>
+									{service.title}
+								</h2>
+								<p class='text-stone-600 dark:text-stone-400 leading-relaxed'>
+									{service.description}
+								</p>
+							</div>
+						</div>
+						<div class='mt-6 flex items-center text-accent font-semibold text-sm uppercase tracking-wider'>
+							Learn More
+							<svg
+								xmlns='http://www.w3.org/2000/svg'
+								class='h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform'
+								fill='none'
+								viewBox='0 0 24 24'
+								stroke='currentColor'
+							>
+								<path
+									stroke-linecap='round'
+									stroke-linejoin='round'
+									stroke-width='2'
+									d='M9 5l7 7-7 7'
+								/>
+							</svg>
+						</div>
+					</a>
+				))
+			}
+		</div>
+
+		<div
+			class='mt-20 rounded-3xl border border-stone-200 dark:border-white/10 bg-stone-50 dark:bg-white/5 p-8 md:p-12 text-center'
+		>
+			<h2 class='text-3xl font-bold mb-4'>Custom Plating Requirements?</h2>
+			<p class='text-lg text-stone-600 dark:text-stone-400 mb-8 max-w-2xl mx-auto'>
+				We provide custom thickness and specialty plating solutions for high-precision components.
+				Our technical team is ready to assist you.
+			</p>
+			<a
+				href='/#contact'
+				class='px-8 py-4 rounded-xl bg-accent text-white font-bold text-lg hover:bg-accent/90 transition-all'
+			>
+				Contact Technical Team
+			</a>
+		</div>
+	</div>
+</BaseLayout>

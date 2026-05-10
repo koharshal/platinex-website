@@ -6,27 +6,33 @@ import WhatsappIcon from '../components/icons/WhatsappIcon.astro'
 import bannerImage from '../assets/images/banner.jpg'
 ---
 
-<BaseLayout title='Platinex Industries — Electroplating Services'>
+<BaseLayout
+	title='Electroplating Services in Nashik, India — Copper, Nickel, Zinc & Tin Plating'
+	description='Platinex Industries offers precision copper, nickel, zinc, and tin electroplating services in Nashik MIDC for electrical, switchgear, automobile, and electronics industries. Fast 1-day turnaround with strict QA.'
+>
 	<div class='mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8'>
 		<section class='grid gap-12 md:gap-20'>
 			<!-- Hero -->
 			<div class='relative rounded-3xl overflow-hidden ring-1 ring-stone-200/70 dark:ring-white/10'>
 				<img
 					src={bannerImage.src}
-					alt=''
+					alt='Electroplating production facility at Platinex Industries, Nashik MIDC — copper, nickel, zinc and tin plating lines'
 					class='absolute inset-0 w-full h-full object-cover opacity-30 md:opacity-25'
+					width='1200'
+					height='600'
 				/>
 				<div class='absolute inset-0 bg-gradient-to-t from-stone-900/15 to-transparent'></div>
 				<div class='relative z-10 px-6 py-12 md:px-12 md:py-20'>
 					<h1 class='text-4xl md:text-6xl font-extrabold leading-tight tracking-tight'>
 						<span class='accent-underline'
-							>Best Electroplating Service for Electrical, Switchgear & Automobile Components in
-							India</span
+							>Precision Electroplating Services in Nashik, India — Copper, Nickel, Zinc &amp; Tin
+							Plating</span
 						>
 					</h1>
 					<p class='mt-4 md:mt-5 text-lg md:text-xl text-stone-700 dark:text-stone-300 max-w-3xl'>
-						High‑quality metal finishing with strict QA, fast delivery, and reliable performance for
-						demanding applications.
+						Nashik's trusted electroplating partner — high‑quality copper, nickel, zinc &amp; tin
+						plating with strict QA, 1-day turnaround, and 24×7 operations for electrical, switchgear
+						&amp; automobile industries.
 					</p>
 					<div class='mt-6 md:mt-7 flex flex-wrap gap-3'>
 						<a href='/blog' class='px-5 py-3 rounded-md bg-accent text-white font-semibold'
@@ -46,18 +52,23 @@ import bannerImage from '../assets/images/banner.jpg'
 				<h2 class='text-2xl md:text-3xl font-bold tracking-tight'>Our Plating Services</h2>
 				<div class='grid gap-6 md:gap-8 md:grid-cols-2 xl:grid-cols-4'>
 					<!-- Card template: neutral surface with subtle border and accent top border -->
-					<div
-						class='rounded-2xl border border-stone-200 dark:border-white/10 bg-white/70 dark:bg-white/5 p-6'
+					<a
+						href='/services/copper-plating'
+						class='group rounded-2xl border border-stone-200 dark:border-white/10 bg-white/70 dark:bg-white/5 p-6 hover:border-accent transition-all duration-300'
 					>
 						<div class='h-1 w-10 bg-accent rounded-full'></div>
-						<h3 class='mt-4 text-lg font-semibold tracking-tight'>Copper Plating</h3>
+						<h3
+							class='mt-4 text-lg font-semibold tracking-tight group-hover:text-accent transition-colors'
+						>
+							Copper Plating
+						</h3>
 						<p class='mt-2 text-sm leading-relaxed text-stone-600 dark:text-stone-400'>
 							Highly conductive and smooth; used as base layer or functional coat.
 						</p>
 						<ul class='mt-4 space-y-2 text-sm'>
 							<li class='flex items-start gap-2'>
 								<CheckIcon /><span
-									><strong>Purpose:</strong> Electrical conductivity, solderability, corrosion masking</span
+									><strong>Purpose:</strong> Electrical conductivity, corrosion masking</span
 								>
 							</li>
 							<li class='flex items-start gap-2'>
@@ -69,13 +80,18 @@ import bannerImage from '../assets/images/banner.jpg'
 								>
 							</li>
 						</ul>
-					</div>
+					</a>
 
-					<div
-						class='rounded-2xl border border-stone-200 dark:border-white/10 bg-white/70 dark:bg-white/5 p-6'
+					<a
+						href='/services/nickel-plating'
+						class='group rounded-2xl border border-stone-200 dark:border-white/10 bg-white/70 dark:bg-white/5 p-6 hover:border-accent transition-all duration-300'
 					>
 						<div class='h-1 w-10 bg-accent rounded-full'></div>
-						<h3 class='mt-4 text-lg font-semibold tracking-tight'>Nickel Plating</h3>
+						<h3
+							class='mt-4 text-lg font-semibold tracking-tight group-hover:text-accent transition-colors'
+						>
+							Nickel Plating
+						</h3>
 						<p class='mt-2 text-sm leading-relaxed text-stone-600 dark:text-stone-400'>
 							Hard, corrosion‑resistant, and arc‑resistant surface.
 						</p>
@@ -94,13 +110,18 @@ import bannerImage from '../assets/images/banner.jpg'
 								>
 							</li>
 						</ul>
-					</div>
+					</a>
 
-					<div
-						class='rounded-2xl border border-stone-200 dark:border-white/10 bg-white/70 dark:bg-white/5 p-6'
+					<a
+						href='/services/zinc-plating'
+						class='group rounded-2xl border border-stone-200 dark:border-white/10 bg-white/70 dark:bg-white/5 p-6 hover:border-accent transition-all duration-300'
 					>
 						<div class='h-1 w-10 bg-accent rounded-full'></div>
-						<h3 class='mt-4 text-lg font-semibold tracking-tight'>Zinc Plating</h3>
+						<h3
+							class='mt-4 text-lg font-semibold tracking-tight group-hover:text-accent transition-colors'
+						>
+							Zinc Plating
+						</h3>
 						<p class='mt-2 text-sm leading-relaxed text-stone-600 dark:text-stone-400'>
 							Cost‑effective sacrificial rust protection for ferrous parts.
 						</p>
@@ -121,13 +142,18 @@ import bannerImage from '../assets/images/banner.jpg'
 								>
 							</li>
 						</ul>
-					</div>
+					</a>
 
-					<div
-						class='rounded-2xl border border-stone-200 dark:border-white/10 bg-white/70 dark:bg-white/5 p-6'
+					<a
+						href='/services/tin-plating'
+						class='group rounded-2xl border border-stone-200 dark:border-white/10 bg-white/70 dark:bg-white/5 p-6 hover:border-accent transition-all duration-300'
 					>
 						<div class='h-1 w-10 bg-accent rounded-full'></div>
-						<h3 class='mt-4 text-lg font-semibold tracking-tight'>Tin Plating</h3>
+						<h3
+							class='mt-4 text-lg font-semibold tracking-tight group-hover:text-accent transition-colors'
+						>
+							Tin Plating
+						</h3>
 						<p class='mt-2 text-sm leading-relaxed text-stone-600 dark:text-stone-400'>
 							Soft, highly solderable coating with excellent corrosion resistance.
 						</p>
@@ -146,7 +172,25 @@ import bannerImage from '../assets/images/banner.jpg'
 								>
 							</li>
 						</ul>
-					</div>
+					</a>
+				</div>
+				<div class='mt-8 text-center'>
+					<a
+						href='/services'
+						class='inline-flex items-center gap-2 text-accent font-semibold hover:underline'
+					>
+						View All Services
+						<svg
+							xmlns='http://www.w3.org/2000/svg'
+							class='h-4 w-4'
+							fill='none'
+							viewBox='0 0 24 24'
+							stroke='currentColor'
+						>
+							<path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 5l7 7-7 7'
+							></path>
+						</svg>
+					</a>
 				</div>
 			</section>
 
@@ -577,9 +621,10 @@ import bannerImage from '../assets/images/banner.jpg'
 							<div class='space-y-3'>
 								<div class='flex items-center gap-3'>
 									<LocationIcon class='w-5 h-5 text-accent' />
-									<span class='text-stone-600 dark:text-stone-400'
-										>Plot no. 156/3, Ambad-Vilholi MIDC Link Road, Vilholi, Nashik - 422010</span
-									>
+									<address class='not-italic text-stone-600 dark:text-stone-400'>
+										Platinex Industries Private Limited, Plot no. 156/3, Ambad-Vilholi MIDC Link
+										Road, Vilholi, Nashik - 422010, Maharashtra, India
+									</address>
 								</div>
 								<div class='flex items-center gap-3'>
 									<div class='w-5 h-5 bg-accent rounded-full flex items-center justify-center'>
@@ -630,6 +675,149 @@ import bannerImage from '../assets/images/banner.jpg'
 					</div>
 				</div>
 			</section>
+
+			<!-- FAQ Section -->
+			<section id='faq' class='grid gap-8'>
+				<h2 class='text-2xl md:text-3xl font-bold tracking-tight'>Frequently Asked Questions</h2>
+				<div class='grid gap-4'>
+					<details
+						class='rounded-2xl border border-stone-200 dark:border-white/10 bg-white/70 dark:bg-white/5 p-6 group'
+						open
+					>
+						<summary
+							class='font-semibold text-lg cursor-pointer list-none flex justify-between items-center'
+						>
+							What electroplating services does Platinex Industries offer in Nashik?
+							<span class='text-accent group-open:rotate-180 transition-transform duration-200'
+								>▾</span
+							>
+						</summary>
+						<p class='mt-4 text-stone-600 dark:text-stone-400 leading-relaxed'>
+							Platinex Industries offers copper plating, nickel plating, zinc plating, and tin
+							plating services at our facility in Nashik MIDC (Vilholi). We serve the electrical,
+							switchgear, automobile, capacitor, and electronics industries with barrel and rack
+							plating processes.
+						</p>
+					</details>
+					<details
+						class='rounded-2xl border border-stone-200 dark:border-white/10 bg-white/70 dark:bg-white/5 p-6 group'
+					>
+						<summary
+							class='font-semibold text-lg cursor-pointer list-none flex justify-between items-center'
+						>
+							What is the typical lead time for electroplating orders?
+							<span class='text-accent group-open:rotate-180 transition-transform duration-200'
+								>▾</span
+							>
+						</summary>
+						<p class='mt-4 text-stone-600 dark:text-stone-400 leading-relaxed'>
+							Our standard lead time is 1 day. We operate 24×7 for expedited and urgent
+							requirements, ensuring minimal disruption to your production schedule.
+						</p>
+					</details>
+					<details
+						class='rounded-2xl border border-stone-200 dark:border-white/10 bg-white/70 dark:bg-white/5 p-6 group'
+					>
+						<summary
+							class='font-semibold text-lg cursor-pointer list-none flex justify-between items-center'
+						>
+							What plating thickness ranges do you offer?
+							<span class='text-accent group-open:rotate-180 transition-transform duration-200'
+								>▾</span
+							>
+						</summary>
+						<p class='mt-4 text-stone-600 dark:text-stone-400 leading-relaxed'>
+							We offer: Copper plating 3–30 µm, Nickel plating 2–25 µm, Zinc plating 2–12 µm, and
+							Tin plating 2–10 µm. Thickness is verified with XRF testing and all our plating meets
+							RoHS compliance requirements.
+						</p>
+					</details>
+					<details
+						class='rounded-2xl border border-stone-200 dark:border-white/10 bg-white/70 dark:bg-white/5 p-6 group'
+					>
+						<summary
+							class='font-semibold text-lg cursor-pointer list-none flex justify-between items-center'
+						>
+							Where is Platinex Industries located? Do you serve clients outside Nashik?
+							<span class='text-accent group-open:rotate-180 transition-transform duration-200'
+								>▾</span
+							>
+						</summary>
+						<p class='mt-4 text-stone-600 dark:text-stone-400 leading-relaxed'>
+							We are located at Plot no. 156/3, Ambad-Vilholi MIDC Link Road, Vilholi, Nashik –
+							422010, Maharashtra. While we primarily serve the Nashik and Maharashtra region, we
+							also supply clients across India with safe packaging and reliable logistics.
+						</p>
+					</details>
+					<details
+						class='rounded-2xl border border-stone-200 dark:border-white/10 bg-white/70 dark:bg-white/5 p-6 group'
+					>
+						<summary
+							class='font-semibold text-lg cursor-pointer list-none flex justify-between items-center'
+						>
+							Do you provide RoHS-compliant and trivalent zinc plating?
+							<span class='text-accent group-open:rotate-180 transition-transform duration-200'
+								>▾</span
+							>
+						</summary>
+						<p class='mt-4 text-stone-600 dark:text-stone-400 leading-relaxed'>
+							Yes. Our zinc plating uses trivalent blue, yellow, green, and black passivation —
+							fully RoHS compliant. We provide Certificates of Conformance (CoC), Material TDS, and
+							RoHS declarations on request.
+						</p>
+					</details>
+				</div>
+			</section>
 		</section>
 	</div>
+
+	<!-- FAQPage Structured Data -->
+	<script type='application/ld+json'>
+		{
+			"@context": "https://schema.org",
+			"@type": "FAQPage",
+			"mainEntity": [
+				{
+					"@type": "Question",
+					"name": "What electroplating services does Platinex Industries offer in Nashik?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "Platinex Industries offers copper plating, nickel plating, zinc plating, and tin plating services at our facility in Nashik MIDC (Vilholi). We serve the electrical, switchgear, automobile, capacitor, and electronics industries with barrel and rack plating processes."
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "What is the typical lead time for electroplating orders?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "Our standard lead time is 1 day. We operate 24x7 for expedited and urgent requirements, ensuring minimal disruption to your production schedule."
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "What plating thickness ranges do you offer?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "We offer: Copper plating 3-30 µm, Nickel plating 2-25 µm, Zinc plating 2-12 µm, and Tin plating 2-10 µm. Thickness is verified with XRF testing and all our plating meets RoHS compliance requirements."
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "Where is Platinex Industries located? Do you serve clients outside Nashik?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "We are located at Plot no. 156/3, Ambad-Vilholi MIDC Link Road, Vilholi, Nashik - 422010, Maharashtra. While we primarily serve the Nashik and Maharashtra region, we also supply clients across India with safe packaging and reliable logistics."
+					}
+				},
+				{
+					"@type": "Question",
+					"name": "Do you provide RoHS-compliant and trivalent zinc plating?",
+					"acceptedAnswer": {
+						"@type": "Answer",
+						"text": "Yes. Our zinc plating uses trivalent blue, yellow, green, and black passivation - fully RoHS compliant. We provide Certificates of Conformance (CoC), Material TDS, and RoHS declarations on request."
+					}
+				}
+			]
+		}
+	</script>
 </BaseLayout>

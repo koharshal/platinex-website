@@ -1,0 +1,175 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import CheckIcon from '../../components/icons/CheckIcon.astro'
+import nickelImage from '../../assets/images/nickel_plating_components.png'
+
+const serviceSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'Service',
+	name: 'Nickel Plating Service',
+	provider: {
+		'@type': 'LocalBusiness',
+		name: 'Platinex Industries Private Limited',
+		url: 'https://platinex.in/',
+		telephone: '+918600146841',
+		address: {
+			'@type': 'PostalAddress',
+			streetAddress: 'Plot no. 156/3, Ambad-Vilholi MIDC Link Road, Vilholi',
+			addressLocality: 'Nashik',
+			addressRegion: 'Maharashtra',
+			postalCode: '422010',
+			addressCountry: 'IN'
+		}
+	},
+	description:
+		'Professional nickel electroplating in Nashik. Hard, arc-resistant nickel for fasteners, shafts, valves, and switchgear. 2–25 µm electrolytic process.',
+	areaServed: ['Nashik', 'Maharashtra', 'India'],
+	serviceType: 'Nickel Electroplating',
+	url: 'https://platinex.in/services/nickel-plating'
+}
+---
+
+<BaseLayout
+	title='Nickel Plating Service in Nashik, India — Platinex Industries'
+	description='Hard, arc-resistant nickel electroplating in Nashik MIDC. Bright and dull nickel for fasteners, shafts, valves, switchgear contacts, and connectors. 2–25 µm electrolytic. Fast 1-day turnaround.'
+>
+	<script type='application/ld+json' set:html={JSON.stringify(serviceSchema)} />
+	<div class='mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8'>
+		<div class='grid gap-12 md:gap-16'>
+			<nav class='text-sm text-stone-500 dark:text-stone-400' aria-label='Breadcrumb'>
+				<ol class='flex items-center gap-2'>
+					<li><a href='/' class='hover:text-accent transition-colors'>Home</a></li>
+					<li>/</li>
+					<li><a href='/services' class='hover:text-accent transition-colors'>Services</a></li>
+					<li>/</li>
+					<li class='text-stone-900 dark:text-white font-medium'>Nickel Plating</li>
+				</ol>
+			</nav>
+			<div
+				class='rounded-3xl overflow-hidden ring-1 ring-stone-200/70 dark:ring-white/10 bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900/20 dark:to-slate-800/10'
+			>
+				<div class='flex flex-col md:flex-row items-stretch'>
+					<div class='flex-1 p-8 md:p-14'>
+						<div class='w-20 h-20 bg-accent/20 rounded-full flex items-center justify-center mb-6'>
+							<span class='text-3xl font-bold text-accent'>Ni</span>
+						</div>
+						<h1 class='text-4xl md:text-5xl font-extrabold leading-tight tracking-tight mb-4'>
+							Nickel Plating Service in Nashik, India
+						</h1>
+						<p class='text-lg text-stone-700 dark:text-stone-300 max-w-xl'>
+							Hard, corrosion-resistant, and arc-resistant nickel electroplating for fasteners,
+							shafts, valves, switchgear contacts, and connectors. Bright and dull finishes
+							available.
+						</p>
+						<div class='mt-8 flex flex-wrap gap-4'>
+							<a href='/#contact' class='px-6 py-3 rounded-md bg-accent text-white font-semibold'
+								>Get a Quote</a
+							>
+							<a
+								href='tel:+918600146841'
+								class='px-6 py-3 rounded-md border border-stone-300 dark:border-stone-700 font-semibold hover:border-accent hover:text-accent transition-colors'
+								>Call: +91 86001 46841</a
+							>
+						</div>
+					</div>
+					<div class='flex-1 w-full min-h-[300px] relative'>
+						<img
+							src={nickelImage.src}
+							alt='Precision nickel plated industrial components at Platinex Industries Nashik'
+							class='absolute inset-0 w-full h-full object-cover'
+						/>
+					</div>
+				</div>
+			</div>
+			<section class='grid gap-6'>
+				<h2 class='text-2xl md:text-3xl font-bold tracking-tight'>Nickel Plating Specifications</h2>
+				<div class='grid gap-6 md:grid-cols-3'>
+					<div
+						class='rounded-2xl border border-stone-200 dark:border-white/10 bg-white/70 dark:bg-white/5 p-6'
+					>
+						<p class='text-sm text-stone-500 uppercase tracking-wider font-medium'>
+							Thickness Range
+						</p>
+						<p class='text-4xl font-bold text-accent mt-2'>
+							2 – 25 <span class='text-xl'>µm</span>
+						</p>
+					</div>
+					<div
+						class='rounded-2xl border border-stone-200 dark:border-white/10 bg-white/70 dark:bg-white/5 p-6'
+					>
+						<p class='text-sm text-stone-500 uppercase tracking-wider font-medium'>
+							Finish Options
+						</p>
+						<p class='text-2xl font-bold mt-2'>Bright / Dull</p>
+					</div>
+					<div
+						class='rounded-2xl border border-stone-200 dark:border-white/10 bg-white/70 dark:bg-white/5 p-6'
+					>
+						<p class='text-sm text-stone-500 uppercase tracking-wider font-medium'>Process</p>
+						<p class='text-2xl font-bold mt-2'>Electrolytic</p>
+					</div>
+				</div>
+			</section>
+			<section class='grid gap-6'>
+				<h2 class='text-2xl md:text-3xl font-bold tracking-tight'>Applications & Key Benefits</h2>
+				<div class='grid gap-4 md:grid-cols-2'>
+					<div
+						class='rounded-2xl border border-stone-200 dark:border-white/10 bg-white/70 dark:bg-white/5 p-6'
+					>
+						<h3 class='font-semibold text-lg mb-3'>Applications</h3>
+						<ul class='space-y-2 text-sm text-stone-600 dark:text-stone-400'>
+							<li class='flex items-start gap-2'>
+								<CheckIcon /><span>Fasteners, bolts, and hardware</span>
+							</li>
+							<li class='flex items-start gap-2'>
+								<CheckIcon /><span>Shafts, valves, and mechanical parts</span>
+							</li>
+							<li class='flex items-start gap-2'>
+								<CheckIcon /><span>Switchgear arc contacts</span>
+							</li>
+							<li class='flex items-start gap-2'>
+								<CheckIcon /><span>Electrical connectors and terminals</span>
+							</li>
+						</ul>
+					</div>
+					<div
+						class='rounded-2xl border border-stone-200 dark:border-white/10 bg-white/70 dark:bg-white/5 p-6'
+					>
+						<h3 class='font-semibold text-lg mb-3'>Key Benefits</h3>
+						<ul class='space-y-2 text-sm text-stone-600 dark:text-stone-400'>
+							<li class='flex items-start gap-2'>
+								<CheckIcon /><span>Excellent corrosion resistance</span>
+							</li>
+							<li class='flex items-start gap-2'>
+								<CheckIcon /><span>High hardness (400–700 HV)</span>
+							</li>
+							<li class='flex items-start gap-2'>
+								<CheckIcon /><span>Arc resistance for switchgear</span>
+							</li>
+							<li class='flex items-start gap-2'>
+								<CheckIcon /><span>Wear resistance for moving parts</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<div class='rounded-2xl border border-accent/30 bg-accent/5 p-8 text-center'>
+				<h2 class='text-2xl font-bold mb-3'>Ready to Start Your Nickel Plating Order?</h2>
+				<p class='text-stone-600 dark:text-stone-400 mb-6'>
+					Contact Platinex Industries in Nashik MIDC. We respond within hours.
+				</p>
+				<div class='flex flex-wrap justify-center gap-4'>
+					<a
+						href='mailto:platinexindustries@gmail.com'
+						class='px-6 py-3 rounded-md bg-accent text-white font-semibold'>Email Us</a
+					>
+					<a
+						href='tel:+918600146841'
+						class='px-6 py-3 rounded-md border border-accent text-accent font-semibold hover:bg-accent hover:text-white transition-colors'
+						>+91 86001 46841</a
+					>
+				</div>
+			</div>
+		</div>
+	</div>
+</BaseLayout>

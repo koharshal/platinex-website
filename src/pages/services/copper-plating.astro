@@ -1,0 +1,240 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import CheckIcon from '../../components/icons/CheckIcon.astro'
+import copperImage from '../../assets/images/copper_plated_bus_bars.png'
+
+const serviceSchema = {
+	'@context': 'https://schema.org',
+	'@type': 'Service',
+	name: 'Copper Plating Service',
+	provider: {
+		'@type': 'LocalBusiness',
+		name: 'Platinex Industries Private Limited',
+		url: 'https://platinex.in/',
+		telephone: '+918600146841',
+		address: {
+			'@type': 'PostalAddress',
+			streetAddress: 'Plot no. 156/3, Ambad-Vilholi MIDC Link Road, Vilholi',
+			addressLocality: 'Nashik',
+			addressRegion: 'Maharashtra',
+			postalCode: '422010',
+			addressCountry: 'IN'
+		}
+	},
+	description:
+		'Professional copper electroplating service in Nashik MIDC. High-conductivity copper plating for bus bars, electrical components, grounding parts, and PCBs. Thickness range 3–30 µm, barrel process, RoHS compliant.',
+	areaServed: ['Nashik', 'Maharashtra', 'India'],
+	serviceType: 'Copper Electroplating',
+	url: 'https://platinex.in/services/copper-plating'
+}
+---
+
+<BaseLayout
+	title='Copper Plating Service in Nashik, India — Platinex Industries'
+	description='Professional copper electroplating in Nashik MIDC. High-conductivity copper plating for bus bars, electrical components, switchgear, and grounding parts. 3–30 µm, barrel process, RoHS compliant. Fast 1-day turnaround.'
+>
+	<script type='application/ld+json' set:html={JSON.stringify(serviceSchema)} />
+
+	<div class='mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8'>
+		<div class='grid gap-12 md:gap-16'>
+			<!-- Breadcrumb -->
+			<nav class='text-sm text-stone-500 dark:text-stone-400' aria-label='Breadcrumb'>
+				<ol class='flex items-center gap-2'>
+					<li><a href='/' class='hover:text-accent transition-colors'>Home</a></li>
+					<li>/</li>
+					<li><a href='/services' class='hover:text-accent transition-colors'>Services</a></li>
+					<li>/</li>
+					<li class='text-stone-900 dark:text-white font-medium'>Copper Plating</li>
+				</ol>
+			</nav>
+
+			<!-- Hero -->
+			<div
+				class='rounded-3xl overflow-hidden ring-1 ring-stone-200/70 dark:ring-white/10 bg-gradient-to-br from-amber-50 to-amber-100 dark:from-amber-900/10 dark:to-amber-800/10'
+			>
+				<div class='flex flex-col md:flex-row items-stretch'>
+					<div class='flex-1 p-8 md:p-14'>
+						<div class='w-20 h-20 bg-accent/20 rounded-full flex items-center justify-center mb-6'>
+							<span class='text-3xl font-bold text-accent'>Cu</span>
+						</div>
+						<h1 class='text-4xl md:text-5xl font-extrabold leading-tight tracking-tight mb-4'>
+							Copper Plating Service in Nashik, India
+						</h1>
+						<p class='text-lg text-stone-700 dark:text-stone-300 max-w-xl'>
+							High-conductivity copper electroplating for electrical components, bus bars,
+							switchgear, and grounding parts. Serving manufacturers across Nashik MIDC and all of
+							India.
+						</p>
+						<div class='mt-8 flex flex-wrap gap-4'>
+							<a
+								href='/#contact'
+								class='px-6 py-3 rounded-md bg-accent text-white font-semibold hover:bg-accent/90 transition-colors'
+							>
+								Get a Quote
+							</a>
+							<a
+								href='tel:+918600146841'
+								class='px-6 py-3 rounded-md border border-stone-300 dark:border-stone-700 font-semibold hover:border-accent hover:text-accent transition-colors'
+							>
+								Call: +91 86001 46841
+							</a>
+						</div>
+					</div>
+					<div class='flex-1 w-full min-h-[300px] relative'>
+						<img
+							src={copperImage.src}
+							alt='Copper plated bus bars and electrical components at Platinex Industries Nashik'
+							class='absolute inset-0 w-full h-full object-cover'
+						/>
+					</div>
+				</div>
+			</div>
+
+			<!-- Key Specs -->
+			<section class='grid gap-6'>
+				<h2 class='text-2xl md:text-3xl font-bold tracking-tight'>Copper Plating Specifications</h2>
+				<div class='grid gap-6 md:grid-cols-3'>
+					<div
+						class='rounded-2xl border border-stone-200 dark:border-white/10 bg-white/70 dark:bg-white/5 p-6'
+					>
+						<p
+							class='text-sm text-stone-500 dark:text-stone-400 uppercase tracking-wider font-medium'
+						>
+							Thickness Range
+						</p>
+						<p class='text-4xl font-bold text-accent mt-2'>
+							3 – 30 <span class='text-xl'>µm</span>
+						</p>
+					</div>
+					<div
+						class='rounded-2xl border border-stone-200 dark:border-white/10 bg-white/70 dark:bg-white/5 p-6'
+					>
+						<p
+							class='text-sm text-stone-500 dark:text-stone-400 uppercase tracking-wider font-medium'
+						>
+							Process Type
+						</p>
+						<p class='text-2xl font-bold mt-2'>Barrel Plating</p>
+					</div>
+					<div
+						class='rounded-2xl border border-stone-200 dark:border-white/10 bg-white/70 dark:bg-white/5 p-6'
+					>
+						<p
+							class='text-sm text-stone-500 dark:text-stone-400 uppercase tracking-wider font-medium'
+						>
+							Lead Time
+						</p>
+						<p class='text-2xl font-bold mt-2'>1 Day Standard</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Applications -->
+			<section class='grid gap-6'>
+				<h2 class='text-2xl md:text-3xl font-bold tracking-tight'>Applications & Industries</h2>
+				<div class='grid gap-4 md:grid-cols-2'>
+					<div
+						class='rounded-2xl border border-stone-200 dark:border-white/10 bg-white/70 dark:bg-white/5 p-6'
+					>
+						<h3 class='font-semibold text-lg mb-3'>Primary Applications</h3>
+						<ul class='space-y-2 text-sm text-stone-600 dark:text-stone-400'>
+							<li class='flex items-start gap-2'>
+								<CheckIcon /><span>Bus bars and electrical conductors</span>
+							</li>
+							<li class='flex items-start gap-2'>
+								<CheckIcon /><span>Switchgear components and terminals</span>
+							</li>
+							<li class='flex items-start gap-2'>
+								<CheckIcon /><span>Grounding parts and connectors</span>
+							</li>
+							<li class='flex items-start gap-2'>
+								<CheckIcon /><span>PCB through-hole plating base layers</span>
+							</li>
+							<li class='flex items-start gap-2'>
+								<CheckIcon /><span>Capacitor leads and electrical contacts</span>
+							</li>
+						</ul>
+					</div>
+					<div
+						class='rounded-2xl border border-stone-200 dark:border-white/10 bg-white/70 dark:bg-white/5 p-6'
+					>
+						<h3 class='font-semibold text-lg mb-3'>Industries Served</h3>
+						<ul class='space-y-2 text-sm text-stone-600 dark:text-stone-400'>
+							<li class='flex items-start gap-2'>
+								<CheckIcon /><span>Electrical & Power Distribution</span>
+							</li>
+							<li class='flex items-start gap-2'>
+								<CheckIcon /><span>Switchgear Manufacturing</span>
+							</li>
+							<li class='flex items-start gap-2'>
+								<CheckIcon /><span>Automobile & EV Components</span>
+							</li>
+							<li class='flex items-start gap-2'>
+								<CheckIcon /><span>Electronics & PCB Manufacturers</span>
+							</li>
+							<li class='flex items-start gap-2'>
+								<CheckIcon /><span>Capacitor & Component Makers</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<!-- Why Copper -->
+			<section class='grid gap-6'>
+				<h2 class='text-2xl md:text-3xl font-bold tracking-tight'>Why Choose Copper Plating?</h2>
+				<div class='grid gap-4 md:grid-cols-3'>
+					<div
+						class='rounded-2xl border border-stone-200 dark:border-white/10 bg-white/70 dark:bg-white/5 p-6'
+					>
+						<h3 class='font-semibold text-lg'>Superior Conductivity</h3>
+						<p class='mt-2 text-sm text-stone-600 dark:text-stone-400'>
+							Copper's electrical conductivity is second only to silver, making it the ideal choice
+							for electrical and electronic applications.
+						</p>
+					</div>
+					<div
+						class='rounded-2xl border border-stone-200 dark:border-white/10 bg-white/70 dark:bg-white/5 p-6'
+					>
+						<h3 class='font-semibold text-lg'>Base Layer for Multi-Plating</h3>
+						<p class='mt-2 text-sm text-stone-600 dark:text-stone-400'>
+							Copper is commonly used as an undercoat before nickel or tin plating to improve
+							adhesion and corrosion masking.
+						</p>
+					</div>
+					<div
+						class='rounded-2xl border border-stone-200 dark:border-white/10 bg-white/70 dark:bg-white/5 p-6'
+					>
+						<h3 class='font-semibold text-lg'>RoHS Compliant</h3>
+						<p class='mt-2 text-sm text-stone-600 dark:text-stone-400'>
+							Our copper plating process is fully RoHS compliant. Certificates of Conformance
+							available on request.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- CTA -->
+			<div class='rounded-2xl border border-accent/30 bg-accent/5 p-8 text-center'>
+				<h2 class='text-2xl font-bold mb-3'>Ready to Start Your Copper Plating Order?</h2>
+				<p class='text-stone-600 dark:text-stone-400 mb-6'>
+					Contact Platinex Industries in Nashik MIDC for a quick quote. We respond within hours.
+				</p>
+				<div class='flex flex-wrap justify-center gap-4'>
+					<a
+						href='mailto:platinexindustries@gmail.com'
+						class='px-6 py-3 rounded-md bg-accent text-white font-semibold hover:bg-accent/90 transition-colors'
+					>
+						Email Us
+					</a>
+					<a
+						href='tel:+918600146841'
+						class='px-6 py-3 rounded-md border border-accent text-accent font-semibold hover:bg-accent hover:text-white transition-colors'
+					>
+						+91 86001 46841
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</BaseLayout>
