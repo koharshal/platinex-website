@@ -78,9 +78,9 @@ const articleDate = pubDate.toISOString()
 					<div class='mb-8'>
 						<Image
 							src={heroImage}
-							width={1000}
-							height={500}
-							quality={80}
+							widths={[400, 800, 1000]}
+							sizes='(max-width: 600px) 400px, (max-width: 1000px) 800px, 1000px'
+							quality={70}
 							loading='eager'
 							fetchpriority='high'
 							class='rounded-xl w-full max-h-[400px] md:max-h-[500px] object-cover shadow-lg'

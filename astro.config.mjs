@@ -9,6 +9,9 @@ import { siteConfig } from './src/data/site.config'
 export default defineConfig({
 	site: siteConfig.site,
 	output: 'static',
+	build: {
+		inlineStylesheets: 'always'
+	},
 
 	markdown: {
 		remarkPlugins: [remarkReadingTime],
