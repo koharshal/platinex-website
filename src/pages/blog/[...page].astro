@@ -3,16 +3,18 @@ import BaseLayout from '../../layouts/BaseLayout.astro'
 import ListPosts from '../../components/ListPosts.astro'
 import ListCategories from '../../components/ListCategories.astro'
 import Pagination from '../../components/Pagination.astro'
-import TitlePage from '../../components/TitlePage.astro'
 import { getPosts } from '../../utils/index.ts'
-import { siteConfig } from '../../data/site.config'
 
-const MAX_POSTS = 5
-const viewAll = Astro.url.searchParams.get('view') === 'all'
-const posts = viewAll ? await getPosts() : await getPosts(MAX_POSTS)
+export async function getStaticPaths({ paginate }) {
+	const allPosts = await getPosts()
+	return paginate(allPosts, { pageSize: 6 })
+}
+
+const { page } = Astro.props
+const isFirstPage = page.currentPage === 1
 ---
 
-<BaseLayout title='Blog'>
+<BaseLayout title={`Blog - Page ${page.currentPage}`}>
 	<div class='mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8'>
 		<section class='grid gap-6 md:gap-8'>
 			<!-- Hero Section -->
@@ -32,18 +34,9 @@ const posts = viewAll ? await getPosts() : await getPosts(MAX_POSTS)
 				</div>
 			</div>
 
-			{/* Show title for "View All" */}
+			{/* Categories Section - only show on first page */}
 			{
-				viewAll && (
-					<section class='text-center'>
-						<h2 class='text-2xl md:text-3xl font-bold tracking-tight'>All Blog Posts</h2>
-					</section>
-				)
-			}
-
-			{/* Categories Section - only show when not viewing all */}
-			{
-				!viewAll && (
+				isFirstPage && (
 					<section class='grid gap-6'>
 						<h2 class='text-2xl md:text-3xl font-bold tracking-tight text-center'>
 							Browse by Category
@@ -57,16 +50,15 @@ const posts = viewAll ? await getPosts() : await getPosts(MAX_POSTS)
 
 			{/* Posts Section */}
 			<section class='grid gap-6'>
-				{
-					!viewAll && (
-						<h2 class='text-2xl md:text-3xl font-bold tracking-tight text-center'>Latest Posts</h2>
-					)
-				}
+				<h2 class='text-2xl md:text-3xl font-bold tracking-tight text-center'>
+					{isFirstPage ? 'Latest Posts' : `Posts (Page ${page.currentPage})`}
+				</h2>
 				<div
 					class='bg-white/70 dark:bg-white/5 rounded-2xl border border-stone-200 dark:border-white/10 p-6'
 				>
-					<ListPosts FirstBig={!viewAll} posts={posts} />
+					<ListPosts FirstBig={isFirstPage} posts={page.data} />
 				</div>
+				<Pagination page={page} />
 			</section>
 		</section>
 	</div>
