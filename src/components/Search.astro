@@ -27,7 +27,6 @@ import SearchIcon from '@/components/icons/SearchIcon'
 </site-search>
 
 <script>
-	import { animate } from 'motion'
 	class SiteSearch extends HTMLElement {
 		constructor() {
 			super()
@@ -55,6 +54,7 @@ import SearchIcon from '@/components/icons/SearchIcon'
 			const openModal = async (event?: MouseEvent) => {
 				dialog.showModal()
 
+				const { animate } = await import('motion')
 				animate(
 					'dialog',
 					{

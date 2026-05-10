@@ -65,14 +65,13 @@ const {
 </article>
 
 <script>
-	import { animate } from 'motion'
-
 	const images = document.querySelectorAll('img')
 
-	document.addEventListener('DOMContentLoaded', function () {
+	document.addEventListener('DOMContentLoaded', async function () {
 		const showAnimations = localStorage.getItem('animations') === 'true'
 
 		if (showAnimations) {
+			const { animate } = await import('motion')
 			animate(
 				'.effect',
 				{
