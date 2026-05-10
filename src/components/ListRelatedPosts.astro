@@ -11,28 +11,29 @@ type Props = {
 const { posts } = Astro.props
 ---
 
-<section class={cn(`flex flex-col md:flex-row sm:justify-between gap-8`)}>
+<section class={cn(`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-4`)}>
 	{
 		posts.length > 0 ? (
 			posts.map((post) => {
 				return (
-					<div class='flex flex-wrap gap-2'>
-						<div class='min-h-full'>
+					<a
+						href={`/post/${post.slug}/`}
+						class='group flex flex-col gap-3 rounded-2xl border border-stone-200 dark:border-white/10 bg-white/50 dark:bg-stone-900/50 hover:bg-stone-50 dark:hover:bg-stone-800/50 p-3 md:p-4 transition-all duration-200 hover:shadow-md'
+					>
+						<div class='aspect-video overflow-hidden rounded-xl bg-stone-100 dark:bg-stone-800'>
 							<Image
 								src={post.data.heroImage}
-								width={200}
-								height={200}
+								width={400}
+								height={225}
 								format='webp'
-								class='w-16 h-16 object-cover rounded-full  '
+								class='h-full w-full object-cover transition-transform duration-300 group-hover:scale-105'
 								alt={`img of ${post.data.title}`}
 							/>
 						</div>
-						<header class='flex justify-center items-center'>
-							<a class='font-medium  hover:underline' href={`/post/${post.slug}/`}>
-								{post.data.title}
-							</a>
-						</header>
-					</div>
+						<h3 class='font-semibold text-stone-900 dark:text-white line-clamp-2 leading-snug'>
+							{post.data.title}
+						</h3>
+					</a>
 				)
 			})
 		) : (
