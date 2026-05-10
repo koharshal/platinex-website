@@ -10,7 +10,7 @@ export default defineConfig({
 	site: siteConfig.site,
 	output: 'static',
 	build: {
-		inlineStylesheets: 'always'
+		inlineStylesheets: 'auto'
 	},
 
 	markdown: {
