@@ -9,7 +9,7 @@ import EditBlog from '../components/editBlog.astro'
 const { title, description, image, articleDate } = Astro.props
 ---
 
-<html lang='en-IN' class='scroll-smooth'>
+<html lang='en-IN'>
 	<head>
 		<BaseHead title={title} description={description} ogImage={image} articleDate={articleDate} />
 		<ProviderTheme />
@@ -26,9 +26,10 @@ const { title, description, image, articleDate } = Astro.props
 		</main>
 		<TwSizeIndicator />
 		<EditBlog />
-	</body><style is:global>
-		:root {
-			scrollbar-gutter: stable;
-		}
-	</style>
+		<style is:global>
+			:root {
+				scrollbar-gutter: stable;
+			}
+		</style>
+	</body>
 </html>

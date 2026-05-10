@@ -10,8 +10,9 @@ export default defineConfig({
 	site: siteConfig.site,
 	output: 'static',
 	build: {
-		inlineStylesheets: 'auto'
+		inlineStylesheets: 'always'
 	},
+	prefetch: false,
 
 	markdown: {
 		remarkPlugins: [remarkReadingTime],
