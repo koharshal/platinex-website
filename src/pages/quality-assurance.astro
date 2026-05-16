@@ -1,6 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
+import { Image } from 'astro:assets'
 import CheckIcon from '../components/icons/CheckIcon.astro'
+import xrfImage from '../assets/images/trivalent_zinc_plating.png'
+import saltSprayImage from '../assets/images/zinc_plating_hardware.png'
+import titrationImage from '../assets/images/PCB_copper_layer_electroplating_machine.jpg'
 
 const schema = {
 	'@context': 'https://schema.org',
@@ -120,18 +124,30 @@ const schema = {
 					</ul>
 				</div>
 				<div
-					class='aspect-video rounded-3xl bg-stone-100 dark:bg-white/5 border border-stone-200 dark:border-white/10 flex items-center justify-center p-8'
+					class='aspect-video rounded-3xl overflow-hidden bg-stone-100 dark:bg-white/5 border border-stone-200 dark:border-white/10'
 				>
-					<span class='text-stone-400 italic'>[Image: XRF Testing Device Analysis]</span>
+					<Image
+						src={xrfImage}
+						alt='XRF Thickness Testing'
+						class='w-full h-full object-cover'
+						width={800}
+						height={450}
+					/>
 				</div>
 			</div>
 
 			<!-- Salt Spray Testing -->
 			<div class='grid md:grid-cols-2 gap-12 items-center'>
 				<div
-					class='order-2 md:order-1 aspect-video rounded-3xl bg-stone-100 dark:bg-white/5 border border-stone-200 dark:border-white/10 flex items-center justify-center p-8'
+					class='order-2 md:order-1 aspect-video rounded-3xl overflow-hidden bg-stone-100 dark:bg-white/5 border border-stone-200 dark:border-white/10'
 				>
-					<span class='text-stone-400 italic'>[Image: Salt Spray Testing Chamber]</span>
+					<Image
+						src={saltSprayImage}
+						alt='Salt Spray Testing Results'
+						class='w-full h-full object-cover'
+						width={800}
+						height={450}
+					/>
 				</div>
 				<div class='order-1 md:order-2'>
 					<h2 class='text-3xl font-bold mb-6'>Salt Spray Corrosion Testing</h2>
@@ -177,9 +193,15 @@ const schema = {
 					</ul>
 				</div>
 				<div
-					class='aspect-video rounded-3xl bg-stone-100 dark:bg-white/5 border border-stone-200 dark:border-white/10 flex items-center justify-center p-8'
+					class='aspect-video rounded-3xl overflow-hidden bg-stone-100 dark:bg-white/5 border border-stone-200 dark:border-white/10'
 				>
-					<span class='text-stone-400 italic'>[Image: Laboratory Chemical Titration]</span>
+					<Image
+						src={titrationImage}
+						alt='Laboratory Analysis and Titration'
+						class='w-full h-full object-cover'
+						width={800}
+						height={450}
+					/>
 				</div>
 			</div>
 		</div>

@@ -60,7 +60,7 @@
 	body { @apply bg-white text-stone-900 dark:bg-[#0a0910] dark:text-white font-sans; }
 	.prose code { @apply text-base; }
 	.prose h1,
-	h1, h2, h3, h4, h5, h6 { @apply font-heading text-zinc-800 dark:text-zinc-100 !important; }
+	h1, h2, h3, h4, h5, h6 { @apply font-heading text-zinc-800 dark:text-zinc-100; }
 
 	::selection { background: theme(colors.accent / 0.14); color: inherit; }
 
