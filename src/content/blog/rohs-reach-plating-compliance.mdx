@@ -1,0 +1,101 @@
+---
+heroImage: ../../assets/images/zinc_plating_hardware.png
+category: Technical Guides
+title: 'RoHS and REACH Compliance in Electroplating: A Practical Guide'
+description: 'Navigate the complex world of RoHS and REACH compliance for surface finishing. Learn which plating chemicals are restricted, the difference between hexavalent and trivalent chromium, and how to verify supplier compliance.'
+pubDate: 2026-05-17T08:00:00.000Z
+tags:
+  - rohs-compliance
+  - reach-compliance
+  - trivalent-passivation
+  - environmental-standards
+---
+
+If you are manufacturing products for export to the European Union, North America, or increasingly, for domestic Indian OEMs, your surface finishing specifications must be compliant with global environmental directives. The two most critical frameworks are **RoHS** (Restriction of Hazardous Substances) and **REACH** (Registration, Evaluation, Authorisation and Restriction of Chemicals).
+
+For procurement and design engineers, specifying "RoHS Compliant Plating" is easy. Actually ensuring that the plated components received from your supply chain meet the strict chemical limits of these directives requires understanding exactly what is restricted and how plating chemistry has evolved to adapt.
+
+---
+
+## RoHS in Electroplating: The Heavy Metals Ban
+
+The RoHS Directive (currently 2011/65/EU, often called RoHS 2, with amendments like RoHS 3) restricts the use of specific hazardous materials in electrical and electronic equipment.
+
+For the electroplating industry, the primary concern lies with four restricted heavy metals:
+
+1. **Lead (Pb)**: Limit < 0.1% (1000 ppm)
+2. **Cadmium (Cd)**: Limit < 0.01% (100 ppm)
+3. **Mercury (Hg)**: Limit < 0.1% (1000 ppm)
+4. **Hexavalent Chromium (Cr⁶⁺ or Cr(VI))**: Limit < 0.1% (1000 ppm)
+
+### The Cadmium Challenge
+
+Cadmium plating offers exceptional corrosion resistance, natural lubricity, and solderability. However, due to its extreme toxicity, it is strictly banned under RoHS (except for very narrow aerospace/military exemptions).
+**The Compliant Alternative**: Zinc-Nickel alloy plating (12-15% Ni) or Zinc flake coatings.
+
+### The Hexavalent Chromium (Cr⁶⁺) Challenge
+
+This is the most widespread compliance issue in plating. Historically, the protective passivation layer applied over zinc plating (the "chromate" layer that gives zinc its yellow, olive drab, or black color) relied heavily on hexavalent chromium. Cr⁶⁺ is highly effective at preventing white rust, but it is a known carcinogen.
+
+**The Compliant Alternative**: Trivalent Chromium (Cr³⁺) passivation. Modern chemistry has advanced so that thick-film trivalent passivations (often sealed with topcoats) now meet or exceed the corrosion resistance of legacy hexavalent chromates.
+
+_Note: The actual zinc layer is unaffected by RoHS; the restriction applies solely to the chemical conversion coating (passivation) applied on top of the zinc._
+
+### The Lead in Electroless Nickel Challenge
+
+Historically, lead (along with cadmium) was used as a trace stabilizer and brightener in Electroless Nickel (ENP) baths.
+**The Compliant Alternative**: Modern RoHS-compliant ENP baths use heavy-metal-free stabilizers (often organic compounds or bismuth). You must explicitly specify "Lead-free/RoHS Compliant Electroless Nickel" when ordering.
+
+---
+
+## REACH in Electroplating: Beyond the Final Product
+
+While RoHS restricts what is in the _final product_, REACH applies to the _chemicals used in the manufacturing process_ inside the European Union (and dictates what can be imported).
+
+REACH maintains a list of **Substances of Very High Concern (SVHC)**. If an SVHC is present in an article above 0.1% by weight, manufacturers must notify customers and provide safe handling data.
+
+### REACH and the Plating Process
+
+The biggest impact of REACH on plating involves **Chromium Trioxide (Chromic acid)**, which contains Cr⁶⁺. This is the primary chemical used in:
+
+- Hard Chrome Plating
+- Decorative Chrome Plating
+- Etching of plastics prior to plating (Plating on Plastics/POP)
+
+Under REACH Annex XIV, the _use_ of Chromium Trioxide requires specific authorization. This is driving a massive industry shift toward Trivalent Chrome electroplating for decorative applications and intense research into HVOF thermal spray alternatives for Hard Chrome.
+
+However, it is crucial to understand the difference between the _process_ and the _product_:
+If a part is Hard Chrome plated, the final metallic chrome deposit on the part is zero-valent chromium (Cr⁰), which is completely safe and compliant. The regulatory burden of REACH falls primarily on the plating facility managing the toxic Cr⁶⁺ baths, not necessarily on the end-user of the steel shaft.
+
+---
+
+## How to Specify and Verify Compliance
+
+If your product requires RoHS/REACH compliance, you cannot rely on verbal assurances from your plating supplier. You must document and verify.
+
+### 1. Drawing Specifications
+
+Update your engineering drawings to explicitly ban restricted substances.
+
+- **Bad Callout**: "Zinc Plate, Yellow Chromate" (Implies legacy hexavalent chemistry).
+- **Good Callout**: "Zinc Plate, Trivalent Yellow Passivate, RoHS Compliant per Directive 2011/65/EU."
+
+### 2. Requesting a CoC
+
+For every batch (or as an annual blanket certification), require a **Certificate of Compliance (CoC)** from your plater explicitly stating that the finishes provided contain less than the maximum allowable limits of Pb, Cd, Hg, and Cr⁶⁺.
+
+### 3. Independent Testing
+
+For critical export assemblies, large OEMs will periodically send plated samples to independent laboratories (like SGS or TÜV) for **ICP-OES** (Inductively Coupled Plasma Optical Emission Spectrometry) testing to verify that Cr⁶⁺ and Lead are below the 1000 ppm threshold.
+
+---
+
+## Platinex's Commitment to Compliance
+
+At Platinex Industries, we recognized the global shift toward environmentally responsible surface finishing early on.
+
+- **100% Trivalent Passivation**: We do not operate any hexavalent chromate baths for our zinc and zinc-nickel lines. All clear, yellow, and black passivations are Cr³⁺ based and fully RoHS compliant.
+- **Lead-Free Chemistry**: Our electroless nickel and tin plating lines utilize modern, heavy-metal-free stabilizers and brighteners.
+- **Documentation**: We provide comprehensive Certificates of Compliance for OEMs exporting to EU and US markets.
+
+_Need a reliable partner for RoHS and REACH compliant electroplating in Nashik? [Contact the Platinex engineering team](/contact) to review your specifications._

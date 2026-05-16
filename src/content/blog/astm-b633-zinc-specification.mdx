@@ -1,0 +1,104 @@
+---
+heroImage: ../../assets/images/zinc_plating_hardware.png
+category: Technical Guides
+title: 'ASTM B633: The Complete Guide to Zinc Coating Specifications'
+description: 'A detailed breakdown of ASTM B633, the standard specification for electrodeposited zinc coatings on iron and steel. Learn how to decipher thickness classes, types, and post-plating requirements.'
+pubDate: 2026-05-17T08:10:00.000Z
+tags:
+  - astm-b633
+  - zinc-plating
+  - plating-standards
+  - engineering-specifications
+---
+
+When an engineering drawing calls out "Zinc Plate" without further clarification, it leaves the manufacturer guessing. Will a 3 µm flash coat suffice, or does the part require 25 µm for severe outdoor exposure? Is a clear passivation acceptable, or does it need a yellow chromate? Does it require hydrogen embrittlement relief?
+
+To eliminate this ambiguity, the industry relies on **ASTM B633: Standard Specification for Electrodeposited Coatings of Zinc on Iron and Steel**.
+
+Understanding how to read and specify ASTM B633 is essential for any engineer designing steel components. A complete and correct ASTM B633 callout dictates the thickness, the supplemental treatment (passivation), and the required testing, ensuring the part performs as expected in its intended environment.
+
+---
+
+## Deciphering the ASTM B633 Callout
+
+A proper ASTM B633 specification on a drawing looks like this:
+
+**"Zinc Plate per ASTM B633, Fe/Zn 12, Type II"**
+
+Let's break down what each part of this callout means.
+
+### 1. The Base Metal and Coating (Fe/Zn)
+
+- **Fe**: Denotes the substrate (Iron/Steel).
+- **Zn**: Denotes the coating (Zinc).
+
+### 2. The Thickness Class (12)
+
+The number following "Fe/Zn" indicates the **minimum thickness of the zinc coating in micrometers (µm)**. ASTM B633 defines four standard service condition classes based on the severity of the environment.
+
+| Classification | Minimum Thickness  | Service Condition | Typical Applications                                  |
+| :------------- | :----------------- | :---------------- | :---------------------------------------------------- |
+| **Fe/Zn 25**   | 25 µm (0.0010 in.) | SC 4: Very Severe | Harsh outdoor exposure, marine environments.          |
+| **Fe/Zn 12**   | 12 µm (0.0005 in.) | SC 3: Severe      | Outdoor exposure, non-marine. Automotive underbody.   |
+| **Fe/Zn 8**    | 8 µm (0.0003 in.)  | SC 2: Moderate    | Indoor exposure with condensation. Standard hardware. |
+| **Fe/Zn 5**    | 5 µm (0.0002 in.)  | SC 1: Mild        | Indoor, dry environments. Decorative hardware.        |
+
+_Note: For threaded fasteners, applying 25 µm of zinc will often interfere with thread fit. For standard metric threads, Fe/Zn 8 is typically the maximum practical thickness unless the threads are explicitly cut undersize prior to plating._
+
+### 3. The Supplementary Treatment (Type II)
+
+The "Type" designates the post-plating passivation (conversion coating) applied over the zinc. This layer provides the initial barrier against corrosion and dictates the appearance of the part.
+
+| Type         | Description                            | Color/Appearance                  | Typical Salt Spray to White Rust |
+| :----------- | :------------------------------------- | :-------------------------------- | :------------------------------- |
+| **Type I**   | As-plated (No supplementary treatment) | Bright, metallic                  | < 12 hours                       |
+| **Type II**  | Colored chromate conversion            | Yellow, iridescent, olive drab    | 96 hours                         |
+| **Type III** | Colorless chromate conversion          | Clear, slight blue/silver tint    | 12 hours                         |
+| **Type IV**  | Phosphate conversion                   | Gray/black (used as a paint base) | Variable                         |
+| **Type V**   | Colorless passivate (RoHS Trivalent)   | Clear                             | > 72 hours                       |
+| **Type VI**  | Colored passivate (RoHS Trivalent)     | Iridescent, yellow, black         | > 120 hours                      |
+
+_Important Update:_ Historically, Types II and III relied on Hexavalent Chromium (Cr⁶⁺). Due to RoHS and REACH regulations, Types V and VI were added to explicitly denote Trivalent Chromium (Cr³⁺) passivations. If you require RoHS compliance, you should specify Type V or Type VI.
+
+---
+
+## Hydrogen Embrittlement Relief (Baking)
+
+ASTM B633 includes strict provisions for hydrogen embrittlement relief, referencing **ASTM B849** (Pre-Treatments) and **ASTM B850** (Post-Treatments).
+
+If your steel component has a tensile strength greater than 1000 MPa (or hardness > 31 HRC / 310 HV), the specification mandates post-plating baking to drive out absorbed hydrogen and prevent delayed brittle fracture.
+
+- **The Requirement:** Baking at 190°C to 220°C for 3 to 24 hours, depending on the tensile strength.
+- **The Timing:** Baking must commence within **1 to 3 hours** after electroplating, and critically, _before_ the application of the supplementary treatment (Types II, III, V, VI), as baking will destroy the chromate/passivate layer.
+
+If your drawing simply says "ASTM B633," the plater is technically required to bake high-strength parts. However, a best practice is to explicitly state the baking requirement on the drawing: _"Bake per ASTM B850 Class ER-1 immediately after plating."_
+
+---
+
+## Required Testing Under ASTM B633
+
+When a lot of parts is certified to ASTM B633, the plating facility is affirming that the parts have passed (or would pass) several standard tests:
+
+1. **Thickness Testing (ASTM B487, B499, B504, or B568):** XRF (X-Ray Fluorescence) or magnetic induction is used to verify the minimum thickness specified by the Class.
+2. **Adhesion Testing (ASTM B571):** Typically a burnishing test or bend test. The zinc must not peel, flake, or blister.
+3. **Corrosion Resistance (ASTM B117):** Neutral salt spray testing. The parts must resist the formation of white corrosion products (zinc oxide) for the duration specified by the Type (e.g., 96 hours for Type II).
+
+---
+
+## How to Write a Flawless Callout
+
+To ensure you get exactly what you need, leave no room for interpretation. A complete callout should include:
+
+1. The standard (ASTM B633)
+2. The thickness class (e.g., Fe/Zn 12)
+3. The supplementary treatment type (e.g., Type VI)
+4. RoHS compliance statement (if required)
+5. Baking requirement (if material strength dictates it)
+
+**Example of a Perfect Callout for an Automotive Bracket:**
+
+> _Finish: Zinc Plate per ASTM B633, Fe/Zn 12, Type VI (Trivalent Yellow Passivate). Must be RoHS Compliant. Post-plate bake at 190°C for 8 hours required per ASTM B850 prior to passivation._
+
+---
+
+_At Platinex Industries, we routinely process orders to strict ASTM B633 specifications, providing XRF thickness reports and Certificates of Compliance. [Contact us](/contact) to ensure your parts meet the standard._

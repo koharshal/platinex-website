@@ -1,0 +1,77 @@
+---
+heroImage: ../../assets/images/copper_plated_bus_bars.png
+category: Technical Guides
+title: 'Plating on Brass and Bronze: Substrate Prep and Best Practices'
+description: 'Brass and Bronze are excellent conductors and easily machined, but the lead and zinc within these alloys can sabotage electroplating. Learn the specific pre-treatment and underplating techniques required for copper alloys.'
+pubDate: 2026-05-18T08:40:00.000Z
+tags:
+  - plating-on-brass
+  - copper-alloys
+  - tin-plating
+  - surface-preparation
+---
+
+Copper and its primary alloys—Brass (copper + zinc) and Bronze (copper + tin)—are the foundational materials of the electrical, telecommunications, and plumbing industries. They offer exceptional electrical conductivity, excellent machinability, and natural corrosion resistance.
+
+However, these base metals are rarely used without a surface finish. Electrical contacts are plated with Tin, Silver, or Gold to prevent tarnish and ensure solderability. Plumbing fixtures are plated with Bright Nickel and Chrome for aesthetics and wear resistance.
+
+While plating directly onto pure oxygen-free copper is relatively straightforward, plating onto Brass and Bronze introduces specific metallurgical challenges that, if ignored, will result in blistering, peeling, or total part failure.
+
+---
+
+## Challenge 1: The Lead Content in Free-Machining Brass
+
+To make brass easy to cut on high-speed CNC lathes (creating short, easily cleared chips), metallurgists add **Lead (Pb)** to the alloy. "Free-machining brass" (like Alloy C360) typically contains 2.5% to 3.7% lead.
+
+Lead does not dissolve into the copper-zinc matrix; it sits as distinct, microscopic globules throughout the metal.
+When a leaded brass part goes through a standard pre-treatment line (alkaline cleaner and acid pickle), the cleaning chemicals react differently with the lead than they do with the brass. The acid pickle can actually dissolve the surrounding brass, leaving a microscopic "smut" of lead on the surface.
+
+If you attempt to plate Bright Nickel or Tin directly over this lead smut, the plating will fail to adhere and will blister immediately.
+
+### The Solution: Fluoboric Acid and Copper Strikes
+
+1. **Specialized Acid Pickling:** Instead of standard hydrochloric or sulfuric acid, leaded brass requires pickling in a specialized fluoboric acid (or a proprietary lead-dissolving acid salt) that safely removes the lead smut without over-etching the brass.
+2. **The Copper Strike:** After cleaning, it is highly recommended to apply a flash layer of alkaline copper. This 1-2 \text µm copper strike "seals" the lead inclusions, providing a continuous, pure copper surface for the final finish (nickel, tin, or silver) to bond to flawlessly.
+
+---
+
+## Challenge 2: Zinc Migration in Brass
+
+Brass is heavily alloyed with zinc. In electrical applications where a brass connector is plated with Tin or Gold, a catastrophic metallurgical phenomenon occurs over time: **Zinc Migration**.
+
+At room temperature (and rapidly at elevated operating temperatures), the zinc atoms within the brass will physically migrate (diffuse) outward through the plated layer until they reach the surface. Once the zinc reaches the surface, it oxidizes.
+
+- If the part is Tin-plated for solderability, the zinc oxide ruins the ability of the solder to wet the surface. The joint will fail.
+- If the part is Gold-plated for low contact resistance, the zinc oxide creates an insulating layer, destroying the signal integrity.
+
+### The Solution: The Nickel Barrier Layer
+
+You cannot plate Tin, Silver, or Gold directly onto brass. You must establish a "diffusion barrier."
+Before the final functional finish is applied, the brass component must receive a **Nickel Underplate** (typically 1.25 - 2.5 \text µm thick).
+The tight crystalline structure of the nickel acts as an impenetrable wall, locking the zinc inside the brass substrate permanently. The final Tin or Gold layer is then plated over the nickel.
+
+_(Note: In certain high-frequency RF applications where nickel's magnetic properties are unacceptable, a very thick layer of pure Copper can be used as the diffusion barrier instead of Nickel)._
+
+---
+
+## Challenge 3: Stress Cracking in Stamped Brass
+
+Thin brass sheet used for stamping complex electrical terminals (often Alloy C260 "Cartridge Brass") is highly susceptible to internal stress.
+
+The physical act of stamping, bending, and crimping the brass introduces massive internal mechanical stress. When these highly stressed parts are introduced into the cleaning and plating baths, the chemicals can induce **Stress Corrosion Cracking (SCC)**. The parts will literally crack apart in the plating barrel.
+
+### The Solution: Stress Relief Annealing
+
+Before highly deformed brass stampings are sent for plating, they must undergo a low-temperature stress-relief bake. This thermal cycle relaxes the internal mechanical stresses without fully annealing (softening) the metal, ensuring the parts survive the plating chemistry intact.
+
+---
+
+## Best Practices for Plating Copper Alloys
+
+If you are designing electrical contacts, busbars, or RF connectors out of Brass or Bronze:
+
+1. **Specify the Barrier:** Always specify a Nickel underplate (1.25 \text µm minimum) prior to Gold, Silver, or Tin plating to prevent zinc/copper migration.
+2. **Acknowledge the Lead:** Inform your plater if the alloy is free-machining (leaded) brass so they can adjust their pre-treatment chemistry.
+3. **Control the Brighteners:** If soldering is required, specify _Matte_ Tin or _Sulfamate_ (dull) Nickel. The organic additives in Bright Nickel and Bright Tin severely degrade solderability and high-temperature brazing.
+
+_Platinex Industries specializes in high-reliability plating for the electrical switchgear and telecom sectors. We maintain dedicated Copper, Nickel, Silver, and Tin lines specifically engineered to process copper alloys safely and effectively. [Contact us](/contact) to review your contact plating specifications._

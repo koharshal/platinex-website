@@ -1,0 +1,159 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { Image } from 'astro:assets'
+import switchgearImage from '../../assets/images/copper_plated_bus_bars.png'
+import automotiveImage from '../../assets/images/tin_plating_terminals.png'
+
+const schema = {
+	'@context': 'https://schema.org',
+	'@type': 'WebPage',
+	name: 'Industries Served | Platinex Industries',
+	description:
+		'Explore the industries we serve with precision electroplating services, including Electrical Switchgear, Automotive, and OEM Plant Setups.',
+	url: 'https://platinex.in/industries'
+}
+---
+
+<BaseLayout
+	title='Industries Served | Precision Electroplating for Manufacturing'
+	description='Platinex Industries provides specialized electroplating solutions for Electrical Switchgear, Automotive, Telecommunications, and OEM Plant Setups.'
+>
+	<script type='application/ld+json' set:html={JSON.stringify(schema)} />
+
+	<div class='mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8'>
+		<div class='grid gap-12 md:gap-16 pb-16'>
+			<!-- Header -->
+			<div class='text-center max-w-3xl mx-auto mt-8 md:mt-12'>
+				<h1 class='text-4xl md:text-5xl font-extrabold tracking-tight mb-4'>
+					Industries We <span class='text-accent'>Serve</span>
+				</h1>
+				<p class='text-lg text-stone-600 dark:text-stone-400'>
+					Delivering high-performance surface finishing solutions tailored to the strict
+					specifications and compliance requirements of modern engineering sectors.
+				</p>
+			</div>
+
+			<!-- Industries Grid -->
+			<div class='grid md:grid-cols-2 gap-8'>
+				<!-- Electrical Switchgear -->
+				<a
+					href='/industries/electrical-switchgear'
+					class='group block rounded-2xl md:rounded-3xl overflow-hidden ring-1 ring-stone-200 dark:ring-white/10 hover:ring-accent/50 transition-all bg-white dark:bg-stone-900 shadow-sm hover:shadow-md'
+				>
+					<div class='aspect-[16/9] relative bg-stone-100 dark:bg-stone-800 overflow-hidden'>
+						<Image
+							src={switchgearImage}
+							alt='Electrical Switchgear Plating'
+							class='w-full h-full object-cover group-hover:scale-105 transition-transform duration-500'
+							width={600}
+							height={338}
+						/>
+						<div class='absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent'></div>
+						<div class='absolute bottom-0 left-0 p-6 w-full'>
+							<h2 class='text-2xl font-bold text-white mb-2'>Electrical & Switchgear</h2>
+						</div>
+					</div>
+					<div class='p-6 md:p-8'>
+						<p class='text-stone-600 dark:text-stone-400 mb-6'>
+							High-conductivity Copper, Silver, and Tin plating for busbars, contacts, and
+							terminals. Ensuring minimal contact resistance and maximum efficiency.
+						</p>
+						<span class='inline-flex items-center text-accent font-semibold group-hover:underline'>
+							Learn More <svg
+								class='w-4 h-4 ml-1'
+								viewBox='0 0 24 24'
+								fill='none'
+								stroke='currentColor'
+								stroke-width='2'><path d='M5 12h14M12 5l7 7-7 7'></path></svg
+							>
+						</span>
+					</div>
+				</a>
+
+				<!-- Automotive -->
+				<a
+					href='/industries/automotive'
+					class='group block rounded-2xl md:rounded-3xl overflow-hidden ring-1 ring-stone-200 dark:ring-white/10 hover:ring-accent/50 transition-all bg-white dark:bg-stone-900 shadow-sm hover:shadow-md'
+				>
+					<div class='aspect-[16/9] relative bg-stone-100 dark:bg-stone-800 overflow-hidden'>
+						<Image
+							src={automotiveImage}
+							alt='Automotive Plating Components'
+							class='w-full h-full object-cover group-hover:scale-105 transition-transform duration-500'
+							width={600}
+							height={338}
+						/>
+						<div class='absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent'></div>
+						<div class='absolute bottom-0 left-0 p-6 w-full'>
+							<h2 class='text-2xl font-bold text-white mb-2'>Automotive & Fasteners</h2>
+						</div>
+					</div>
+					<div class='p-6 md:p-8'>
+						<p class='text-stone-600 dark:text-stone-400 mb-6'>
+							Corrosion-resistant Zinc and Zinc-Nickel alloy plating for under-the-hood components,
+							chassis parts, and high-tensile fasteners. RoHS compliant.
+						</p>
+						<span class='inline-flex items-center text-accent font-semibold group-hover:underline'>
+							Learn More <svg
+								class='w-4 h-4 ml-1'
+								viewBox='0 0 24 24'
+								fill='none'
+								stroke='currentColor'
+								stroke-width='2'><path d='M5 12h14M12 5l7 7-7 7'></path></svg
+							>
+						</span>
+					</div>
+				</a>
+
+				<!-- OEM Plant Setup -->
+				<a
+					href='/industries/oem-plant-setup'
+					class='group block rounded-2xl md:rounded-3xl overflow-hidden ring-1 ring-stone-200 dark:ring-white/10 hover:ring-accent/50 transition-all bg-white dark:bg-stone-900 shadow-sm hover:shadow-md md:col-span-2'
+				>
+					<div class='flex flex-col md:flex-row h-full'>
+						<div
+							class='w-full md:w-2/5 bg-accent/5 flex items-center justify-center p-8 md:p-12 border-b md:border-b-0 md:border-r border-stone-200 dark:border-white/10'
+						>
+							<div class='w-24 h-24 rounded-full bg-accent/20 flex items-center justify-center'>
+								<svg
+									class='w-12 h-12 text-accent'
+									fill='none'
+									viewBox='0 0 24 24'
+									stroke='currentColor'
+								>
+									<path
+										stroke-linecap='round'
+										stroke-linejoin='round'
+										stroke-width='1.5'
+										d='M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4'
+									></path>
+								</svg>
+							</div>
+						</div>
+						<div class='p-6 md:p-8 md:p-12 flex flex-col justify-center flex-1'>
+							<h2 class='text-2xl md:text-3xl font-bold mb-4'>Dedicated OEM Plant Setups</h2>
+							<p class='text-lg text-stone-600 dark:text-stone-400 mb-8 max-w-2xl'>
+								For major manufacturers requiring massive scale, we build, operate, and maintain
+								dedicated, highly automated electroplating lines tailored exclusively to your
+								production volume.
+							</p>
+							<div>
+								<span
+									class='inline-flex items-center px-6 py-3 rounded-lg bg-accent text-white font-semibold group-hover:bg-accent/90 transition-colors'
+								>
+									Explore OEM Solutions <svg
+										class='w-4 h-4 ml-2'
+										viewBox='0 0 24 24'
+										fill='none'
+										stroke='currentColor'
+										stroke-width='2'><path d='M5 12h14M12 5l7 7-7 7'></path></svg
+									>
+								</span>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</BaseLayout>

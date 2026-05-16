@@ -10,85 +10,141 @@ const today = new Date()
 
 <footer class='bg-stone-50 dark:bg-stone-900/50 border-t border-stone-200 dark:border-white/10'>
 	<div class='max-w-6xl mx-auto px-6 py-12'>
-		<div class='grid grid-cols-1 md:grid-cols-3 gap-8'>
+		<div class='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12'>
 			<!-- Company Info -->
-			<div class='space-y-4'>
+			<div class='space-y-6'>
 				<PlatinexLogo />
 				<p class='text-stone-600 dark:text-stone-400 text-sm leading-relaxed'>
-					Leading electrical, switchgear and automobile plating service provider in India,
-					delivering quality and precision since inception.
+					Specialized in high-conductivity and corrosion-resistant electroplating for the
+					Electrical, Switchgear, and Automotive industries.
 				</p>
-			</div>
-
-			<!-- Contact Information -->
-			<div class='space-y-4'>
-				<h3 class='font-heading font-semibold text-lg text-stone-900 dark:text-white'>
-					Contact Us
-				</h3>
-				<div class='space-y-3 text-sm'>
-					<div class='flex items-start gap-3'>
-						<LocationIcon class='w-5 h-5 text-accent mt-0.5 flex-shrink-0' />
-						<div>
-							<p class='text-stone-900 dark:text-white font-medium'>Platinex Industries</p>
-							<p class='text-stone-600 dark:text-stone-400'>Plot no. 156/3,</p>
-							<p class='text-stone-600 dark:text-stone-400'>Ambad-Vilholi MIDC Link Road,</p>
-							<p class='text-stone-600 dark:text-stone-400'>Vilholi, Nashik - 422010</p>
-						</div>
-					</div>
-					<div class='flex items-center gap-3'>
-						<div
-							class='w-5 h-5 bg-accent rounded-full flex items-center justify-center flex-shrink-0'
-						>
-							<span class='text-white text-xs'>@</span>
-						</div>
-						<a
-							href='mailto:platinexindustries@gmail.com'
-							class='text-stone-600 dark:text-stone-400 hover:text-accent transition-colors'
-						>
-							platinexindustries@gmail.com
-						</a>
-					</div>
-					<div class='flex items-center gap-3'>
-						<WhatsappIcon class='w-5 h-5 text-accent flex-shrink-0' />
-						<a
-							href='tel:+918600146841'
-							class='text-stone-600 dark:text-stone-400 hover:text-accent transition-colors'
-						>
-							(+91) 8600146841
-						</a>
-					</div>
-				</div>
-			</div>
-
-			<!-- Social Links -->
-			<div class='space-y-4'>
-				<h3 class='font-heading font-semibold text-lg text-stone-900 dark:text-white'>
-					Connect With Us
-				</h3>
-				<div class='flex gap-4'>
+				<div class='flex gap-3'>
 					<a
 						href='https://www.linkedin.com/company/platinex/'
 						target='_blank'
-						class='p-3 bg-stone-100 dark:bg-stone-800 rounded-lg hover:bg-accent hover:text-white transition-all duration-200'
+						class='p-2 bg-stone-100 dark:bg-stone-800 rounded-lg hover:bg-accent hover:text-white transition-all duration-200'
 						aria-label='LinkedIn profile'
 					>
-						<LinkedinIcon class='w-5 h-5' />
+						<LinkedinIcon class='w-4 h-4' />
 					</a>
 					<a
 						href='https://wa.me/918600146841'
 						target='_blank'
-						class='p-3 bg-stone-100 dark:bg-stone-800 rounded-lg hover:bg-accent hover:text-white transition-all duration-200'
+						class='p-2 bg-stone-100 dark:bg-stone-800 rounded-lg hover:bg-accent hover:text-white transition-all duration-200'
 						aria-label='Chat on WhatsApp'
 					>
-						<WhatsappIcon class='w-5 h-5' />
+						<WhatsappIcon class='w-4 h-4' />
 					</a>
-					<a
-						href='#contact'
-						class='p-3 bg-stone-100 dark:bg-stone-800 rounded-lg hover:bg-accent hover:text-white transition-all duration-200'
-						aria-label='Our location'
-					>
-						<LocationIcon class='w-5 h-5' />
-					</a>
+				</div>
+			</div>
+
+			<!-- Quick Links -->
+			<div class='space-y-6'>
+				<h3
+					class='font-heading font-bold text-base uppercase tracking-wider text-stone-900 dark:text-white'
+				>
+					Explore
+				</h3>
+				<ul class='space-y-3 text-sm'>
+					<li>
+						<a
+							href='/'
+							class='text-stone-600 dark:text-stone-400 hover:text-accent transition-colors'
+							>Home</a>
+					</li>
+					<li>
+						<a
+							href='/blog'
+							class='text-stone-600 dark:text-stone-400 hover:text-accent transition-colors'
+							>Technical Blog</a>
+					</li>
+					<li>
+						<a
+							href='/quality-assurance'
+							class='text-stone-600 dark:text-stone-400 hover:text-accent transition-colors'
+							>Quality & Lab</a>
+					</li>
+					<li>
+						<a
+							href='/#contact'
+							class='text-stone-600 dark:text-stone-400 hover:text-accent transition-colors'
+							>Contact Us</a>
+					</li>
+				</ul>
+			</div>
+
+			<!-- Services & Industries -->
+			<div class='space-y-6'>
+				<h3
+					class='font-heading font-bold text-base uppercase tracking-wider text-stone-900 dark:text-white'
+				>
+					Solutions
+				</h3>
+				<ul class='space-y-3 text-sm'>
+					<li>
+						<a
+							href='/services'
+							class='text-stone-600 dark:text-stone-400 hover:text-accent transition-colors'
+							>All Services</a>
+					</li>
+					<li>
+						<a
+							href='/industries'
+							class='text-stone-600 dark:text-stone-400 hover:text-accent transition-colors'
+							>Industries Served</a>
+					</li>
+					<li>
+						<a
+							href='/industries/electrical-switchgear'
+							class='text-stone-600 dark:text-stone-400 hover:text-accent transition-colors'
+							>Electrical & Switchgear</a>
+					</li>
+					<li>
+						<a
+							href='/industries/automotive'
+							class='text-stone-600 dark:text-stone-400 hover:text-accent transition-colors'
+							>Automotive Plating</a>
+					</li>
+					<li>
+						<a
+							href='/industries/oem-plant-setup'
+							class='text-stone-600 dark:text-stone-400 hover:text-accent transition-colors'
+							>OEM Plant Setup</a>
+					</li>
+				</ul>
+			</div>
+
+			<!-- Contact Information -->
+			<div class='space-y-6'>
+				<h3
+					class='font-heading font-bold text-base uppercase tracking-wider text-stone-900 dark:text-white'
+				>
+					Location
+				</h3>
+				<div class='space-y-4 text-sm'>
+					<div class='flex items-start gap-3'>
+						<LocationIcon class='w-5 h-5 text-accent mt-0.5 flex-shrink-0' />
+						<div class='text-stone-600 dark:text-stone-400'>
+							<p class='text-stone-900 dark:text-white font-medium mb-1'>Platinex Industries</p>
+							<p>Plot no. 156/3,</p>
+							<p>Ambad-Vilholi MIDC Link Road,</p>
+							<p>Nashik - 422010</p>
+						</div>
+					</div>
+					<div class='pt-2'>
+						<a
+							href='mailto:platinexindustries@gmail.com'
+							class='block text-stone-600 dark:text-stone-400 hover:text-accent transition-colors mb-2'
+						>
+							platinexindustries@gmail.com
+						</a>
+						<a
+							href='tel:+918600146841'
+							class='block text-stone-600 dark:text-stone-400 hover:text-accent transition-colors font-semibold'
+						>
+							+91 86001 46841
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>

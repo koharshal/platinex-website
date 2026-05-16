@@ -1,0 +1,289 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { Image } from 'astro:assets'
+import heroImage from '../../assets/images/nickel_plating_components.png'
+import CheckIcon from '../../components/icons/CheckIcon.astro'
+
+const schema = {
+	'@context': 'https://schema.org',
+	'@type': 'Service',
+	name: 'Dedicated OEM Electroplating Plant Setups',
+	provider: {
+		'@type': 'LocalBusiness',
+		name: 'Platinex Industries Private Limited',
+		address: {
+			'@type': 'PostalAddress',
+			addressLocality: 'Nashik',
+			addressRegion: 'Maharashtra',
+			addressCountry: 'IN'
+		}
+	},
+	description:
+		'Turnkey dedicated surface treatment and electroplating plants built, operated, and maintained for major OEMs to ensure zero logistics overhead and guaranteed capacity.',
+	areaServed: ['Nashik', 'Pune', 'Maharashtra', 'India'],
+	serviceType: 'Turnkey Industrial Solutions'
+}
+---
+
+<BaseLayout
+	title='Dedicated OEM Electroplating Plant Setups | Platinex'
+	description='Turnkey dedicated surface treatment and electroplating plants built, operated, and maintained for major OEMs. Zero logistics overhead, guaranteed capacity.'
+>
+	<script type='application/ld+json' set:html={JSON.stringify(schema)} />
+
+	<div class='mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8'>
+		<div class='grid gap-12 md:gap-16 pb-16'>
+			<!-- Breadcrumb -->
+			<nav class='text-sm text-stone-500 dark:text-stone-400 mt-8' aria-label='Breadcrumb'>
+				<ol class='flex items-center gap-2'>
+					<li><a href='/' class='hover:text-accent transition-colors'>Home</a></li>
+					<li>/</li>
+					<li><a href='/industries' class='hover:text-accent transition-colors'>Industries</a></li>
+					<li>/</li>
+					<li class='text-stone-900 dark:text-white font-medium'>OEM Plant Setups</li>
+				</ol>
+			</nav>
+
+			<!-- Hero Section -->
+			<div
+				class='rounded-2xl md:rounded-3xl overflow-hidden ring-1 ring-stone-200/70 dark:ring-white/10 bg-gradient-to-br from-stone-50 to-stone-100 dark:from-stone-900/50 dark:to-stone-800/50 min-h-[400px] md:min-h-[500px] flex flex-col justify-center'
+			>
+				<div class='flex flex-col md:flex-row items-stretch h-full'>
+					<div class='flex-1 p-6 md:p-14 flex flex-col justify-center'>
+						<div
+							class='w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-6 text-accent'
+						>
+							<svg class='w-8 h-8' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+								<path
+									stroke-linecap='round'
+									stroke-linejoin='round'
+									stroke-width='2'
+									d='M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4'
+								></path>
+							</svg>
+						</div>
+						<h1 class='text-4xl md:text-5xl font-extrabold leading-tight tracking-tight mb-4'>
+							Dedicated <span class='text-accent'>OEM Plant Setups</span>
+						</h1>
+						<p class='text-lg text-stone-700 dark:text-stone-300 max-w-xl mb-8'>
+							Eliminate logistics overhead, reduce inventory lead times, and guarantee 100% capacity
+							allocation by partnering with Platinex to build and operate a dedicated plating line
+							exclusively for your production.
+						</p>
+						<div class='flex flex-wrap gap-4'>
+							<a
+								href='/#contact'
+								class='px-6 py-3 rounded-lg bg-accent text-white font-semibold hover:bg-accent/90 transition-colors'
+								>Schedule a Consultation</a
+							>
+						</div>
+					</div>
+					<div class='flex-1 w-full min-h-[300px] relative hidden md:block'>
+						<Image
+							src={heroImage}
+							alt='Industrial electroplating plant'
+							class='absolute inset-0 w-full h-full object-cover'
+							width={800}
+							height={600}
+							loading='eager'
+						/>
+						<div
+							class='absolute inset-0 bg-gradient-to-r from-stone-50 dark:from-stone-900 via-transparent to-transparent'
+						>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- The Problem vs The Solution -->
+			<section class='grid md:grid-cols-2 gap-8'>
+				<div
+					class='rounded-2xl border-l-4 border-red-500 bg-stone-50 dark:bg-white/5 p-8 border-t border-r border-b border-stone-200 dark:border-white/10'
+				>
+					<h3 class='text-2xl font-bold mb-4 text-stone-900 dark:text-white'>
+						The Traditional Plating Problem
+					</h3>
+					<p class='text-stone-600 dark:text-stone-400 mb-6'>
+						Large-scale OEMs often face severe bottlenecks when outsourcing surface finishing to
+						commercial job shops:
+					</p>
+					<ul class='space-y-4 text-stone-700 dark:text-stone-300'>
+						<li class='flex items-start gap-3'>
+							<svg
+								class='w-6 h-6 text-red-500 flex-shrink-0 mt-0.5'
+								fill='none'
+								viewBox='0 0 24 24'
+								stroke='currentColor'
+								><path
+									stroke-linecap='round'
+									stroke-linejoin='round'
+									stroke-width='2'
+									d='M6 18L18 6M6 6l12 12'></path></svg
+							>
+							<span
+								><strong>Logistics Costs:</strong> Transporting heavy metal parts back and forth eats
+								into margins.</span
+							>
+						</li>
+						<li class='flex items-start gap-3'>
+							<svg
+								class='w-6 h-6 text-red-500 flex-shrink-0 mt-0.5'
+								fill='none'
+								viewBox='0 0 24 24'
+								stroke='currentColor'
+								><path
+									stroke-linecap='round'
+									stroke-linejoin='round'
+									stroke-width='2'
+									d='M6 18L18 6M6 6l12 12'></path></svg
+							>
+							<span
+								><strong>Capacity Constraints:</strong> Job shops juggle multiple clients; your urgent
+								parts get delayed.</span
+							>
+						</li>
+						<li class='flex items-start gap-3'>
+							<svg
+								class='w-6 h-6 text-red-500 flex-shrink-0 mt-0.5'
+								fill='none'
+								viewBox='0 0 24 24'
+								stroke='currentColor'
+								><path
+									stroke-linecap='round'
+									stroke-linejoin='round'
+									stroke-width='2'
+									d='M6 18L18 6M6 6l12 12'></path></svg
+							>
+							<span
+								><strong>Quality Variations:</strong> Shared chemical baths can lead to cross-contamination
+								and inconsistent finishes.</span
+							>
+						</li>
+					</ul>
+				</div>
+				<div
+					class='rounded-2xl border-l-4 border-accent bg-accent/5 p-8 border-t border-r border-b border-accent/20'
+				>
+					<h3 class='text-2xl font-bold mb-4 text-stone-900 dark:text-white'>
+						The Platinex OEM Solution
+					</h3>
+					<p class='text-stone-600 dark:text-stone-400 mb-6'>
+						We design, capitalize, and operate a custom plating line either inside your facility or
+						at a dedicated site nearby:
+					</p>
+					<ul class='space-y-4 text-stone-700 dark:text-stone-300'>
+						<li class='flex items-start gap-3'>
+							<CheckIcon class='w-6 h-6 text-accent flex-shrink-0 mt-0.5' />
+							<span
+								><strong>Zero CapEx for You:</strong> We invest in the tanks, rectifiers, effluent treatment,
+								and automation.</span
+							>
+						</li>
+						<li class='flex items-start gap-3'>
+							<CheckIcon class='w-6 h-6 text-accent flex-shrink-0 mt-0.5' />
+							<span
+								><strong>100% Dedicated Capacity:</strong> The line runs only your parts, ensuring Just-In-Time
+								(JIT) delivery.</span
+							>
+						</li>
+						<li class='flex items-start gap-3'>
+							<CheckIcon class='w-6 h-6 text-accent flex-shrink-0 mt-0.5' />
+							<span
+								><strong>Custom Bath Chemistry:</strong> Formulated specifically for your substrate and
+								finish requirements, eliminating contamination.</span
+							>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- How It Works -->
+			<section class='grid gap-8'>
+				<h2 class='text-2xl md:text-3xl font-bold tracking-tight text-center mb-4'>
+					How Our Turnkey Partnership Works
+				</h2>
+				<div class='grid md:grid-cols-4 gap-6'>
+					<div
+						class='bg-white dark:bg-stone-900 p-6 rounded-2xl border border-stone-200 dark:border-white/10 text-center relative'
+					>
+						<div
+							class='w-12 h-12 bg-stone-100 dark:bg-white/5 rounded-full flex items-center justify-center text-xl font-bold text-accent mx-auto mb-4'
+						>
+							1
+						</div>
+						<h3 class='font-bold mb-2'>Feasibility & Design</h3>
+						<p class='text-sm text-stone-600 dark:text-stone-400'>
+							We analyze your volume, calculate cycle times, and design the optimal semi-automatic
+							or fully automatic line.
+						</p>
+					</div>
+					<div
+						class='bg-white dark:bg-stone-900 p-6 rounded-2xl border border-stone-200 dark:border-white/10 text-center relative'
+					>
+						<div
+							class='w-12 h-12 bg-stone-100 dark:bg-white/5 rounded-full flex items-center justify-center text-xl font-bold text-accent mx-auto mb-4'
+						>
+							2
+						</div>
+						<h3 class='font-bold mb-2'>Capital Investment</h3>
+						<p class='text-sm text-stone-600 dark:text-stone-400'>
+							Platinex funds the equipment, installation, and initial chemical make-up costs,
+							absorbing the financial risk.
+						</p>
+					</div>
+					<div
+						class='bg-white dark:bg-stone-900 p-6 rounded-2xl border border-stone-200 dark:border-white/10 text-center relative'
+					>
+						<div
+							class='w-12 h-12 bg-stone-100 dark:bg-white/5 rounded-full flex items-center justify-center text-xl font-bold text-accent mx-auto mb-4'
+						>
+							3
+						</div>
+						<h3 class='font-bold mb-2'>Operations & Staffing</h3>
+						<p class='text-sm text-stone-600 dark:text-stone-400'>
+							We provide the skilled operators, chemical engineers, and quality control personnel to
+							run the facility.
+						</p>
+					</div>
+					<div
+						class='bg-white dark:bg-stone-900 p-6 rounded-2xl border border-stone-200 dark:border-white/10 text-center relative'
+					>
+						<div
+							class='w-12 h-12 bg-stone-100 dark:bg-white/5 rounded-full flex items-center justify-center text-xl font-bold text-accent mx-auto mb-4'
+						>
+							4
+						</div>
+						<h3 class='font-bold mb-2'>Compliance & ETP</h3>
+						<p class='text-sm text-stone-600 dark:text-stone-400'>
+							We manage all environmental compliance, hazardous waste disposal, and Effluent
+							Treatment Plant (ETP) operations.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- CTA -->
+			<div class='rounded-2xl border border-accent/30 bg-accent/5 p-8 md:p-12 text-center'>
+				<h2 class='text-2xl md:text-3xl font-bold mb-4'>
+					Scale Your Production Without Constraints
+				</h2>
+				<p class='text-stone-600 dark:text-stone-400 mb-8 max-w-2xl mx-auto text-lg'>
+					If you are an OEM spending significant capital and time on outsourcing surface treatment,
+					let us build a dedicated solution for you.
+				</p>
+				<div class='flex flex-wrap justify-center gap-4'>
+					<a
+						href='mailto:platinexindustries@gmail.com'
+						class='px-8 py-4 rounded-lg bg-accent text-white font-semibold hover:bg-accent/90 transition-colors shadow-lg shadow-accent/20'
+						>Discuss a Partnership</a
+					>
+					<a
+						href='tel:+918600146841'
+						class='px-8 py-4 rounded-lg border-2 border-stone-300 dark:border-stone-700 font-semibold hover:border-accent hover:text-accent transition-colors bg-white dark:bg-stone-900'
+						>Call: +91 86001 46841</a
+					>
+				</div>
+			</div>
+		</div>
+	</div>
+</BaseLayout>

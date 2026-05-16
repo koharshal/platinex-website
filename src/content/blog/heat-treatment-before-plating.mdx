@@ -1,0 +1,82 @@
+---
+heroImage: ../../assets/images/nickel_plating_components.png
+category: Technical Guides
+title: 'Why Heat Treatment Sequencing Matters Before Electroplating'
+description: 'Electroplating is highly sensitive to the metallurgical state of the substrate. Learn why the timing of case hardening, annealing, and stress relieving dictates the success or failure of the final plated finish.'
+pubDate: 2026-05-18T10:20:00.000Z
+tags:
+  - heat-treatment
+  - surface-preparation
+  - plating-adhesion
+  - metallurgical-stress
+---
+
+Manufacturing a precision component is a delicate choreography of machining, heat treating, and surface finishing. If these steps are performed out of sequence—or if the plating facility is not informed of the heat treatment history—the result is often scrap metal.
+
+Electroplating does not merely coat a part; it interacts intimately with the crystalline structure, the surface stresses, and the hardness of the base metal.
+
+This guide explains the critical relationship between common heat treatments and the electroplating process, and how engineers should sequence their manufacturing routing.
+
+---
+
+## 1. Case Hardening (Carburizing / Nitriding)
+
+Case hardening creates a part with a tough, ductile core and a file-hard, wear-resistant outer "case." This is common for gears and bearing surfaces.
+
+### The Plating Challenge
+
+When a part is carburized or carbonitrided, the extreme outer layer of the steel is saturated with carbon. As discussed in previous guides, **carbon is the enemy of electroplating adhesion**.
+If a case-hardened part is sent to a plating line and cleaned using a standard acid pickle, the acid dissolves the iron at the surface but leaves the carbon behind as a thick, black "smut." Any plating (zinc, nickel, or copper) applied over this smut will blister and peel.
+
+### The Sequencing Solution
+
+- **Mechanical Descaling:** Case-hardened parts should ideally be mechanically blasted (grit or vapor blast) to remove the heavy carbon scale _before_ arriving at the plating shop.
+- **Specialized Pickling:** The plater must be informed that the part is case-hardened so they can use specialized anodic electrocleaning and short, fluoride-based acid dips that do not generate carbon smut.
+- **The Copper Stop-Off:** Sometimes, the plating happens _before_ the heat treatment. If only the teeth of a gear need to be hardened, the entire gear is heavily Copper Plated. The copper is then machined off _only_ the teeth. When the gear goes into the carburizing furnace, the copper acts as an impenetrable shield, keeping the rest of the gear soft, while the exposed teeth absorb the carbon.
+
+---
+
+## 2. Stress Relief Annealing
+
+Operations like heavy cold-heading (forming screws and bolts), deep drawing, or aggressive stamping introduce massive internal mechanical stresses into the metal lattice.
+
+### The Plating Challenge
+
+If a highly stressed part (particularly brass, bronze, or high-tensile steel) is introduced to the harsh chemistry of a plating line—or subjected to the hydrogen generated during electrocleaning and acid pickling—the part will undergo **Stress Corrosion Cracking (SCC)**. The part will literally tear itself apart, developing micro-cracks or breaking entirely while tumbling in the plating barrel.
+
+### The Sequencing Solution
+
+- **Pre-Plate Stress Relief Bake:** Heavily cold-worked parts must undergo a low-temperature stress relief bake (e.g., 190°\textC for 3 hours for steel, or 250°\textC for brass) _prior_ to entering the plating facility. This relaxes the internal stresses without altering the mechanical strength of the part, allowing it to survive the plating chemistry safely.
+
+---
+
+## 3. Quench and Temper (Through-Hardening)
+
+When high-carbon steel is heated red-hot and quenched in oil or water, it becomes fully hardened (martensitic), creating the strength required for Grade 10.9 or 12.9 fasteners.
+
+### The Plating Challenge
+
+As detailed extensively in our guide on Hydrogen Embrittlement, fully hardened, high-tensile steel acts as a trap for atomic hydrogen generated during the electroplating process. Without intervention, the plated part will suffer a catastrophic, delayed brittle fracture.
+
+### The Sequencing Solution
+
+- **Post-Plate Baking:** The part must be plated, and within **1 to 4 hours**, it must be baked in an oven at roughly 200°\textC.
+- **The Tempering Limit Rule:** There is a critical metallurgical rule here. The post-plate bake temperature must _never_ exceed the original tempering temperature of the part. If a spring was tempered at 180°\textC to achieve its specific spring rate, and the plater bakes it at 220°\textC for hydrogen relief, the spring will lose its temper and become soft. Engineers must communicate the original tempering temperature on the drawing so the plater can adjust the hydrogen bake accordingly.
+
+---
+
+## 4. Heat Treatment of Plated Deposits (Electroless Nickel)
+
+Sometimes, the heat treatment happens specifically to alter the _plating_, rather than the substrate.
+
+The best example is **High-Phosphorus Electroless Nickel (ENP)**.
+As-plated, High-Phos ENP has a hardness of roughly 40-45 HRC and is fully amorphous (glass-like), offering maximum corrosion resistance.
+However, if the part requires extreme wear resistance (like a pump shaft), the _plated_ part is sent to an oven and baked at **400°\textC for 1-2 hours**.
+
+This heat treatment crystallizes the nickel-phosphorus matrix, spiking the hardness to **68-70 HRC** (harder than hard chrome).
+
+- _The Trade-off:_ This heat treatment creates grain boundaries in the ENP coating, significantly reducing its corrosion and chemical resistance. You must sequence your heat treatment based on whether the part prioritizes wear or corrosion survival.
+
+---
+
+_Communication between the design engineer, the heat treater, and the electroplater is essential. At Platinex Industries, we require heat treatment history on all high-strength or case-hardened components to ensure our pre-treatment chemistry is perfectly calibrated. [Contact our engineering team](/contact) to review your manufacturing routing._

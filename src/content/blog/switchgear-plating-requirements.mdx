@@ -1,0 +1,149 @@
+---
+heroImage: ../../assets/images/copper_plated_bus_bars.png
+category: Industry Insights
+title: 'Electroplating for Switchgear: Technical Requirements for Contacts, Busbars, ...'
+description: 'A complete guide to surface finishing requirements for electrical switchgear — from busbar silver and tin plating specifications to arc contact nickel requirements, RoHS compliance, and IS standards.'
+pubDate: 2026-05-17T07:20:00.000Z
+tags:
+  - switchgear-plating
+  - electrical-contacts
+  - busbar-plating
+  - surface-finishing
+---
+
+Switchgear is the circulatory system of electrical infrastructure — the panels, contactors, and disconnects that control and protect power distribution at every level from 240V residential to 11kV industrial. The reliability of switchgear depends not just on its mechanical design but critically on the surface finish of its current-carrying components.
+
+A corroded terminal, a poorly plated busbar joint, or an arc contact with wrong surface preparation can cause contact resistance to increase from milliohms to tens of ohms — enough to generate catastrophic heat at full load current. Understanding the electroplating requirements for switchgear is essential for manufacturers, procurement engineers, and quality managers.
+
+---
+
+## The Conductivity Imperative
+
+Every coating applied to a current-carrying switchgear component must serve the same primary function: maintain the lowest possible electrical contact resistance throughout the component's service life (typically 25 years for HV switchgear).
+
+This rules out most standard coating options. Zinc plating — the default corrosion protection for most steel hardware — is appropriate only for non-current-carrying structural components in switchgear. Zinc forms a non-conductive white zinc oxide film on its surface, increasing contact resistance unacceptably at bolted joints.
+
+For current-carrying components, the specification choices are:
+
+| Component                       | Standard Coating         | Why                                                   |
+| :------------------------------ | :----------------------- | :---------------------------------------------------- |
+| Copper bus bars (joints)        | Silver (15–25 µm)        | Lowest contact resistance; silver oxide is conductive |
+| Aluminium bus bars (joints)     | Silver or Tin (10–15 µm) | Prevents Al oxide formation; tin for cost-sensitive   |
+| Copper terminals and connectors | Tin (5–10 µm)            | Solderability; prevents copper oxide                  |
+| Arc contacts (contactors)       | Nickel or Silver-Nickel  | Arc resistance; wear resistance                       |
+| Fixed arc chambers              | Hard chrome or Nickel    | Dimensional stability under arc erosion               |
+| Structural steel (non-current)  | Zinc + Passivation       | Standard corrosion protection                         |
+
+---
+
+## Busbar Plating: IS 5082 and IS 1897
+
+Indian standards for busbars specify surface treatment requirements:
+
+**IS 5082 (Aluminium busbars for switchgear)**: Specifies that aluminium bus bars for use in switchgear and controlgear assemblies should be silver-plated at connection interfaces when used in installations above 630A, or in humid/aggressive environments.
+
+**IS 1897 (Copper conductors for busbars)**: For copper busbars in high-current applications, silver plating of joint faces is specified at 10–25 µm per IS 4907.
+
+### Minimum Thickness by Current Rating
+
+This is a guideline based on industry practice and OEM specifications. Individual switchgear standards (IS 8623, IEC 61439) do not mandate specific plating thickness — they mandate the conductivity performance the joint must achieve:
+
+| Rated Current | Recommended Silver Thickness | Alternative (cost)              |
+| :------------ | :--------------------------- | :------------------------------ |
+| Up to 630A    | 10 µm silver                 | 5–8 µm tin                      |
+| 630A – 2500A  | 15–20 µm silver              | 10–12 µm tin                    |
+| 2500A – 6300A | 20–25 µm silver              | Not recommended — use silver    |
+| Above 6300A   | 25–40 µm silver              | Special application engineering |
+
+---
+
+## Tin Plating for Switchgear Terminals
+
+Tin is the workhorse surface finish for switchgear terminal blocks, crimped lugs, and circuit breaker terminals. Its advantages over bare copper:
+
+- **Prevents copper oxidation**: Copper oxide is a poor conductor. Tin oxide is also a poor conductor, but tin's self-limiting oxidation (tin oxide is dense and protective) means the outer surface tarnishes while the bulk of the tin remains metallic and conducting.
+- **Solderability**: Tin-plated terminals can be soldered directly. This is critical for circuit board terminal blocks.
+- **Softness and deformability**: Tin deforms under bolt torque, increasing true metallic contact area at terminals.
+- **Cost**: Tin costs 1/60th of silver by weight.
+
+**IEC 60947 (Low-voltage switchgear and controlgear)** does not specify a minimum tin thickness but requires that terminals maintain contact resistance below specified limits through the required number of make-and-break cycles. In practice, 5–10 µm matte tin is the standard specification for LV switchgear terminals.
+
+### Matte vs Bright Tin for Terminals
+
+Specify **matte tin** for electrical contacts and terminals — not bright tin. Matte tin:
+
+- Has a coarser grain structure that resists tin whisker growth
+- Provides better mechanical compliance (deforms more easily under contact pressure)
+- Ages more reliably in humid environments
+
+Bright tin has better aesthetics but higher whisker risk — especially problematic for small-pitch terminals and connectors in confined enclosures where tin whiskers can bridge insulation gaps and cause short circuits. This is an active failure mode documented in IEC TR 62951.
+
+---
+
+## Arc Contact Plating: The Wear Problem
+
+Arc contacts in contactors, air circuit breakers, and disconnects face a uniquely destructive service environment. Every time the contact opens or closes under load, an electrical arc forms and extinguishes in microseconds. The arc temperature reaches 5,000–15,000°C at the contact tip.
+
+No standard plating can survive sustained arc erosion. The contact materials used for arc-facing surfaces are:
+
+- **Silver-Metal Oxide (AgSnO₂, AgCdO)**: Sintered composites — not plated. The oxide particles disrupt arc formation and control erosion.
+- **Tungsten carbide**: For very high current arcing.
+- **Electrolytic nickel or Silver-Nickel (electroplated)**: Used for lower duty contactors (IEC AC-1 to AC-3 categories) where arc erosion per cycle is limited.
+
+For medium-voltage contactors (6.6kV, 11kV) with vacuum interrupters, the interrupter contacts are specialised — electroplated silver or silver-copper composites are used on the contact backing, not the arc-facing surface.
+
+### Where Electroplating Does Matter on Contactors
+
+The **flexibly mounted contact supports, shunts, and backing plates** in a contactor are typically copper or copper alloy, plated with:
+
+- **Silver (5–10 µm)** for high-conductivity contact support structures
+- **Nickel (3–8 µm)** for arc-deflector plates and arc chute components requiring heat and oxidation resistance
+
+---
+
+## RoHS Compliance in Switchgear Plating
+
+Switchgear manufactured for export to the European Union (and now many domestic specifications) must comply with RoHS Directive 2011/65/EU. The key plating implication:
+
+**Hexavalent chromium (Cr⁶⁺) is prohibited.** This means:
+
+- Yellow (iridescent) passivation on zinc must use trivalent (Cr³⁺) chemistry — not the older hexavalent chromate
+- Decorative chrome plating on visible parts must verify Cr⁶⁺ content compliance
+- CoC (Certificate of Conformance) from the plating supplier confirming trivalent-only process
+
+All Platinex passivation processes are trivalent only. We provide RoHS CoC documentation with every order upon request.
+
+---
+
+## Supplier Qualification Checklist for Switchgear Plating
+
+When qualifying a plating supplier for switchgear components, verify:
+
+- [ ] Silver plating capability with XRF thickness verification
+- [ ] Matte tin plating capability (not just bright tin)
+- [ ] In-house XRF analyser (not just external lab)
+- [ ] Salt spray testing capability (ASTM B117 or equivalent)
+- [ ] RoHS CoC capability — trivalent passivation only
+- [ ] ISO 9001 certification (or equivalent QMS)
+- [ ] Documented pre-treatment process (not verbal)
+- [ ] Capacity for your production volume with buffer
+
+---
+
+## Frequently Asked Questions
+
+**Should I plate the entire busbar or just the joint faces?**
+For high-current busbars above 1600A, plating the entire bar surface provides uniform conductivity regardless of assembly configuration and simplifies site connections. For moderate current busbars (up to 800A), plating joint faces only (100–150mm at each end) is acceptable and more cost-effective.
+
+**Can tin-plated aluminium busbars be connected directly to copper busbars?**
+Yes, with correct jointing. The tin-plated aluminium surface connects to the silver or tin-plated copper surface. Use joint compound (contact paste with anti-oxidant) and maintain bolt torque per IS 5082 specifications. Direct bare aluminium-to-copper contact (without plating) creates a galvanic couple and should be avoided.
+
+**What is the risk of using unplated copper busbars?**
+Bare copper busbars oxide over time. In humid environments, the oxide layer can increase contact resistance at joints significantly. In marine or coastal environments, copper sulfide and chloride films form rapidly. Always specify plated joint surfaces for exposed busbars in industrial switchgear.
+
+**How often should switchgear plating be inspected?**
+Per IS 10118 (installation and maintenance of switchgear), inspect busbar joint contacts every 3 years or per manufacturer's schedule. Look for discoloration, fretting, or loss of contact pressure. Bolts should be re-torqued per specification if joints have been exposed to thermal cycling.
+
+---
+
+_Manufacturing switchgear in Nashik or Maharashtra and need silver or tin plating for busbars and terminals? [Contact Platinex Industries](/contact) — we serve switchgear OEMs with same-week turnaround and XRF-certified batch records._

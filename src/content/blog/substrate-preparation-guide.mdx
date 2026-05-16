@@ -1,0 +1,148 @@
+---
+heroImage: ../../assets/images/copper_plated_bus_bars.png
+category: Technical Guides
+title: 'Substrate Preparation Before Plating: The Step That Determines Everything'
+description: 'No plating process can overcome poor substrate preparation. This guide covers the complete pre-treatment sequence — degreasing, acid activation, and rinsing — and explains why each step is critical for coating adhesion and quality.'
+pubDate: 2026-05-17T07:10:00.000Z
+tags:
+  - substrate-preparation
+  - plating-pretreatment
+  - cleaning-before-plating
+  - adhesion
+---
+
+There is a saying in the plating industry that captures a fundamental truth: _"Plating is 90% preparation and 10% chemistry."_ The engineers who believe the plating bath does all the work are the same ones who end up with peeling, blistering, and skip-plated parts that fail in the field.
+
+Substrate preparation — the sequence of cleaning, activation, and rinsing steps that precede electroplating — determines adhesion strength, coating uniformity, and ultimate performance. Understanding what each step does and why it cannot be skipped is the foundation of reliable electroplating.
+
+---
+
+## The Contamination Problem
+
+A freshly machined metal surface, examined at the microscopic level, is covered in:
+
+- **Machining oils and coolants** — from turning, milling, and grinding operations
+- **Buffing compounds** — if the part has been polished
+- **Fingerprints** — human skin oils from handling
+- **Rust and scale** — iron oxide on steel surfaces stored before plating
+- **Drawing compounds** — lubricants from stamping and forming operations
+- **Metallic smear** — from tool wear, deposited on the part surface
+- **Native oxide layer** — formed within seconds of air exposure on any metal
+
+Every one of these contaminants prevents electroplated metal from making direct atomic-level contact with the substrate. The result is adhesion failure — often not immediately visible, but catastrophic in service.
+
+---
+
+## The Standard Pre-Treatment Sequence
+
+### Stage 1: Soak Degreasing (Alkaline Cleaner)
+
+**What it is**: Immersion in a hot (55–70°C) alkaline cleaning solution, typically sodium hydroxide, sodium carbonate, and surfactants at pH 11–13.
+
+**What it removes**: Bulk oils, coolants, and organic contamination through saponification (converting fatty oils into water-soluble soaps) and emulsification (breaking non-saponifiable oils into droplets for rinse removal).
+
+**Time**: 3–10 minutes, depending on soil load.
+
+**What it does NOT remove**: Heavy oxide scale, rust, smut from alloy elements. It cleans organic contamination only.
+
+**Critical point**: If you skip this step and go straight to acid, you drag oil into the acid tank. The acid cannot remove oil — it simply becomes contaminated. Contaminated acid gives unreliable activation and spreads contamination to subsequent tanks.
+
+### Stage 2: Rinse (Overflow or Spray)
+
+Every chemical stage must be followed by thorough rinsing. Drag-out contamination from one chemical stage into the next is one of the most common causes of plating defects.
+
+**Best practice**: Two-stage counter-current rinsing (overflow cascade). This uses the least water while achieving the highest cleanliness. Conductivity monitoring of the final rinse stage alerts operators when rinse efficiency drops.
+
+### Stage 3: Electrolytic Cleaning (Optional but Recommended)
+
+**What it is**: The part is made either anodic (current flows out of the part) or cathodic (current flows into the part) in an alkaline cleaning solution. Electrolytic gas evolution (oxygen at anodic surfaces, hydrogen at cathodic surfaces) provides a vigorous scrubbing action at the metal surface.
+
+**Anodic cleaning**: Oxygen evolution at the surface physically dislodges embedded particles. More effective at removing tenacious contamination but can oxidise the surface.
+
+**Cathodic cleaning**: Hydrogen evolution is even more vigorous. More effective at surface scrubbing but introduces some hydrogen into the substrate — problematic for high-strength steel (see our hydrogen embrittlement article).
+
+**Typical sequence**: 30–60 seconds anodic + 10–15 seconds cathodic. The cathodic finish reverses the slight surface oxide formed during anodic cleaning.
+
+### Stage 4: Acid Activation (Pickling)
+
+**What it is**: Short immersion in a dilute acid solution to remove surface oxide and activate the metal surface for plating.
+
+**For steel**: 10–15% HCl (hydrochloric acid) at room temperature for 30–60 seconds, or 10–15% H₂SO₄ at 50°C.
+
+**For copper alloys (brass, bronze)**: Dilute sulfuric acid or a sulfuric/nitric acid brightdip mixture.
+
+**For stainless steel**: More aggressive — often requires an electrochemical activation in a mixed acid (HF/HNO₃) or Wood's nickel strike directly.
+
+**What it removes**: Thin oxide films, light rust, and the "passivated" surface that would prevent plating adhesion.
+
+**Critical point for high-strength steel**: Acid pickling is the primary source of hydrogen absorption in the plating process. Keep pickling time to the minimum required for oxide removal. Use inhibited acids to reduce over-pickling. Never leave Grade 10.9/12.9 fasteners soaking in acid — activate and transfer immediately.
+
+### Stage 5: Final Rinse Before Plating
+
+The last rinse before the plating tank must be clean and not contaminate the bath. For high-value plating (gold, silver, electroless nickel), deionised water is used in this final rinse stage to prevent chloride or sulfate carry-in that could harm bath chemistry.
+
+---
+
+## The Transfer: The Most Critical Moment
+
+The transfer from the last rinse to the plating tank must be **immediate**. Any air exposure between activation and plating allows the oxide to reform on the freshly activated surface — undoing the activation work.
+
+**Maximum allowed air exposure times after acid activation:**
+
+| Metal           | Maximum Air Exposure                                |
+| :-------------- | :-------------------------------------------------- |
+| Mild steel      | 30 seconds                                          |
+| Copper/brass    | 15 seconds                                          |
+| Stainless steel | 10 seconds                                          |
+| Aluminium       | 5 seconds (zincate must immediately follow de-smut) |
+
+In practice, this means having the plating tank immediately adjacent to the final rinse, and having parts transferred directly from rinse to plating within the allowed window. For automated plating lines, this is managed by the line program. For manual operations, it requires discipline and practice.
+
+---
+
+## Common Pre-Treatment Failures and Their Causes
+
+| Symptom                          | Likely Cause                                 | Fix                                                            |
+| :------------------------------- | :------------------------------------------- | :------------------------------------------------------------- |
+| Plating peels in sheets          | Insufficient degreasing or oxide removal     | Increase soak clean time; check acid concentration             |
+| Blistering after heat or service | Trapped contamination at interface           | Review each stage; check for oil in acid tank                  |
+| Skip plating (bare spots)        | Locally non-wetted surface                   | Check surface tension of baths; verify degreaser effectiveness |
+| Rough or pitted deposit          | Contamination in plating bath from drag-out  | Improve rinsing; implement conductivity monitoring             |
+| Dark streaks on plated part      | Uneven activation                            | Ensure uniform acid contact; check for maskant residue         |
+| Rapid corrosion after plating    | Incomplete rinse; acid trapped under coating | Improve final rinse; check part geometry for trapped pockets   |
+
+---
+
+## Special Pre-Treatment Cases
+
+### Castings (Iron, Aluminium, Zinc Die Cast)
+
+Castings present unique challenges: porosity (microscopic voids in the casting that trap cleaning chemicals), rough surfaces, and varying alloy composition across the part. Standard pre-treatment parameters may need adjustment. Ultrasonic cleaning is often used to reach into cast surface pores. Extended rinsing is critical to flush trapped chemicals from pores.
+
+### Sintered Parts (Powder Metal)
+
+Sintered parts are extremely porous. Every liquid that contacts a sintered part is drawn into the pores by capillary action. Conventional pre-treatment chemicals become trapped and cause post-plate blistering as they slowly emerge. Sintered parts require special pre-treatment sequences: vacuum impregnation of pores with sealant before plating, or modified pre-treatment cycles that deliberately remove trapped chemicals.
+
+### Assemblies with Dissimilar Metals
+
+When an assembly contains both aluminium and copper components, a pre-treatment suitable for one may damage the other. A cleaning cycle safe for copper may dissolve aluminium; an alkaline cycle that works on aluminium may tarnish copper. Pre-treatment for mixed-metal assemblies requires case-by-case engineering.
+
+---
+
+## Frequently Asked Questions
+
+**Can I use ultrasonic cleaning instead of chemical degreasing?**
+Ultrasonic cleaning enhances the effectiveness of chemical cleaning but does not replace it. Ultrasonic agitation accelerates the chemical reactions of solvents or alkaline cleaners, improving penetration into complex geometries. Use ultrasonic cleaning together with appropriate chemistry, not as a standalone process.
+
+**How do I know if my pre-treatment is working?**
+The "water break test" is the standard check: after cleaning and rinsing, water should sheet uniformly off the part surface without beading. Water beading indicates residual oil or silicone contamination. Any beading means the pre-treatment is failing and plating should not proceed.
+
+**Why does my plating supplier want to know what machining oil I use?**
+Different machining oils have dramatically different cleaning characteristics. Mineral oils with extreme-pressure (EP) additives (sulfur and chlorine compounds) are particularly difficult to remove from steel. Synthetic coolants and some water-miscible lubricants can form emulsion films that resist alkaline cleaning. Knowing the lubricant allows the plater to select the optimal cleaning chemistry and parameters.
+
+**Is solvent degreasing (trichloroethylene, acetone) better than alkaline cleaning?**
+Solvent degreasing is excellent for oil removal but has no effect on oxide scale. For production electroplating, alkaline cleaning is standard because it works on a wider range of contaminants and does not require the ventilation and disposal infrastructure of solvent systems. Solvent pre-wipe is sometimes used before alkaline cleaning for heavily oiled parts.
+
+---
+
+_Want to discuss pre-treatment optimisation for your specific substrate and application at our Nashik facility? [Contact Platinex's process engineering team](/contact) for a consultation._

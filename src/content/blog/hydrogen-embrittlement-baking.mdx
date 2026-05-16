@@ -1,0 +1,172 @@
+---
+heroImage: ../../assets/images/nickel_plating_components.png
+category: Technical Guides
+title: 'Hydrogen Embrittlement in Plating: Causes, Detection, and the Baking Cure'
+description: 'Hydrogen embrittlement is the hidden killer of high-strength plated fasteners. This guide explains how hydrogen gets into steel during plating, what it does to mechanical properties, and why baking is the only reliable fix.'
+pubDate: 2026-05-17T06:50:00.000Z
+tags:
+  - hydrogen-embrittlement
+  - high-strength-steel
+  - plating-quality
+  - fastener-plating
+---
+
+A Grade 12.9 bolt, rated for 120,000 PSI tensile strength, snaps in half during assembly at 60% of its rated torque. The fracture surface is flat and crystalline — no ductile deformation, no necking. The failure looks nothing like overload. It is hydrogen embrittlement, and it is entirely preventable with the correct plating process sequence.
+
+Hydrogen embrittlement (HE) is the most dangerous and least understood failure mechanism in metal finishing. Understanding it is not optional for any engineer specifying plating on high-strength steel components.
+
+---
+
+## What Is Hydrogen Embrittlement?
+
+Hydrogen embrittlement is the reduction of a metal's ductility and fracture toughness caused by the presence of dissolved atomic hydrogen within the metal lattice. It is distinct from other forms of embrittlement because:
+
+1. **It is invisible**: The part looks exactly like a non-embrittled part before failure
+2. **It is delayed**: Failure can occur hours or days after plating, often during first assembly or early service
+3. **It is catastrophic**: HE failure is sudden and brittle — no plastic deformation, no warning
+4. **It is selectively dangerous**: Only high-strength materials (primarily high-strength steel above 320 HV, or ~34 HRC) are susceptible. Mild steel is largely immune
+
+---
+
+## How Hydrogen Gets In During Plating
+
+Hydrogen enters the steel during multiple stages of the plating process:
+
+### 1. Acid Pickling (Pre-Treatment)
+
+Acid pickling removes mill scale and surface oxides using hydrochloric acid (HCl) or sulfuric acid (H₂SO₄). The acid reacts with the steel surface:
+
+**Fe + 2HCl → FeCl₂ + H₂**
+
+While most hydrogen escapes as bubbles, a fraction — particularly atomic hydrogen (H°) formed momentarily before recombining into H₂ — diffuses into the steel lattice. The amount absorbed depends on pickling acid concentration, temperature, time, and inhibitor use.
+
+**Best practice**: Use inhibited acids. Pickling inhibitors (e.g., thiourea, quaternary ammonium compounds) slow the iron dissolution reaction and dramatically reduce hydrogen absorption without significantly reducing descaling efficiency.
+
+### 2. Electroplating (Alkaline Baths — Higher Risk)
+
+During electroplating, water reduction at the cathode produces hydrogen:
+
+**2H₂O + 2e⁻ → H₂↑ + 2OH⁻**
+
+This is a competing reaction to metal deposition. In alkaline baths (alkaline zinc, alkaline zinc-nickel), the pH promotes higher hydrogen evolution efficiency. In acid baths (acid copper, acid zinc chloride), hydrogen evolution is lower but still present. Some hydrogen from this reaction is absorbed by the substrate rather than escaping as bubbles.
+
+### 3. Cathodic Cleaning (High-Current Degreasing)
+
+Electrolytic alkaline cleaning applies reverse current to remove oils and grease through the electrolysis of water — which liberates significant quantities of hydrogen at the cathodic work surface. Extended cathodic cleaning times on high-strength steel parts should be avoided or replaced with anodic cleaning sequences.
+
+---
+
+## How Hydrogen Damages Steel
+
+Atomic hydrogen (H°) — the dangerous species — is small enough to fit between iron atoms in the steel lattice. It diffuses through the lattice and preferentially accumulates at:
+
+- **Grain boundaries** — where stress concentration is highest
+- **Dislocations** — crystal defects that are stress concentration sites
+- **Non-metallic inclusions** — voids and interfaces in the steel microstructure
+
+At these locations, atomic hydrogen recombines into molecular hydrogen (H₂) and can build up enormous pressures in microscopic voids. More critically, hydrogen reduces the energy required to propagate cracks through the material. A steel that normally requires 100 J of energy to fracture may fracture with only 20–30 J when embrittled.
+
+The result is **Delayed Hydrogen Embrittlement (DHE)**: fracture occurs when a combination of:
+
+- Sufficient hydrogen concentration
+- Sufficient tensile stress (from assembly preload, press fit, residual stress)
+- Susceptible microstructure
+
+reaches a critical threshold. This explains the "delayed" nature — hydrogen diffuses slowly, reaching critical concentrations and locations over hours or days.
+
+---
+
+## Risk Assessment: Which Parts Are Dangerous?
+
+| Material Hardness                         | Risk Level | Post-Plate Action Required                         |
+| :---------------------------------------- | :--------- | :------------------------------------------------- |
+| < 200 HV (mild steel)                     | Negligible | None                                               |
+| 200–320 HV (medium strength)              | Low        | Optional bake for critical applications            |
+| 320–390 HV (Grade 8.8/10.9 transition)    | Moderate   | Bake recommended (190°C, 4 hrs)                    |
+| > 390 HV (Grade 10.9 / Class 12.9)        | High       | Bake mandatory (190–220°C, 8–24 hrs)               |
+| > 500 HV (hardened tooling, spring steel) | Critical   | Consult metallurgist; consider alternative process |
+
+**The Grade Rule**: As a practical guide, always specify post-plate baking for:
+
+- ISO Grade 10.9 bolts and above
+- ISO Class 12.9 bolts (maximum strength grade)
+- Any high-strength steel with specified hardness > 320 HV
+- Spring steel and spring washers
+- Hardened tooling plated for dimensional restoration
+
+---
+
+## The Solution: Embrittlement Relief Baking
+
+Hydrogen embrittlement is reversible — if you bake the part quickly enough after plating, before hydrogen has time to cause delayed fracture.
+
+### The Baking Process
+
+**Temperature**: 190–220°C (375–430°F)
+**Time**: Varies by part hardness, geometry, and hydrogen exposure level (see table below)
+**Timing**: Must begin within **1 hour of plating completion** — before the zinc or chromate passivation is applied
+
+**Why the timing matters**: At room temperature, hydrogen diffuses slowly but inexorably toward stress concentration sites. If you wait 24 hours before baking, some hydrogen will have already migrated to grain boundaries. Baking within 1 hour of plating maximises the amount of hydrogen still distributed homogeneously through the lattice, where it is most easily driven out.
+
+### Baking Time Requirements
+
+| Hardness              | Section Thickness | Minimum Bake Time        |
+| :-------------------- | :---------------- | :----------------------- |
+| 320–390 HV            | Any               | 4 hours at 190°C         |
+| 390–440 HV            | < 12mm            | 8 hours at 190°C         |
+| 390–440 HV            | > 12mm            | 12 hours at 190°C        |
+| > 440 HV (12.9 bolts) | Any               | 18–24 hours at 200–220°C |
+
+These times are per ASTM F1941 (electrodeposited coatings on threaded fasteners) and ASTM B849 (pre/post-treatments). Individual OEM specifications may differ.
+
+### What Baking Does
+
+At 190°C, atomic hydrogen becomes mobile enough in the steel lattice to diffuse to the surface and escape. The baking does not change the mechanical properties of the steel (190°C is well below any tempering temperature for typical high-strength steel hardened at 800–900°C). It simply allows hydrogen to exit.
+
+After baking, passivation (zinc chromate, or other post-treatments) is applied. The timing sequence is therefore:
+
+**Plate → Bake (within 1 hr) → Passivate → Test**
+
+---
+
+## Detection Methods
+
+### 1. Mercury Nitrate Test (ASTM F519)
+
+A notched test specimen is plated and immersed in a mercury nitrate solution. Mercury penetrates grain boundaries and acts as a stress intensifier. Embrittled specimens fracture within 30 minutes. Non-embrittled specimens survive. This is a **proof-of-process test** (tests the plating process, not every part), typically required quarterly or when process changes are made.
+
+### 2. Sustained Load Test (ASTM F606)
+
+Fasteners are assembled to 75–80% of their proof load (axial stress) and held for 48 hours. Embrittlement failure occurs within this window. This test directly confirms fastener performance and is often required for safety-critical fastener approvals.
+
+### 3. Delayed Fracture Test
+
+Parts are stressed and held for 200 hours. No fractures = passing result. More demanding than the 48-hour test, used for aerospace and defence applications.
+
+---
+
+## What Cannot Be Baked
+
+Passivation (chromate or trivalent passivation) applied over zinc or zinc-nickel **must not be baked above 70°C** — heat destroys the passive chromate layer, eliminating the corrosion protection. This is why the sequence is bake first, passivate second — not the other way around.
+
+Similarly, parts with rubber O-rings, plastic inserts, or temperature-sensitive components cannot be baked at 190°C. For these assemblies, either the platable metal components must be baked before assembly, or alternative processes (mechanical zinc coating, zinc flake coating) that do not introduce hydrogen should be specified.
+
+---
+
+## Frequently Asked Questions
+
+**My supplier says they "do not have the hydrogen embrittlement problem." Is that possible?**
+Unlikely for high-strength parts plated by standard electroplating in acid or alkaline baths. While process optimisation (reduced pickling time, inhibited acids, efficient electrolytes) minimises hydrogen absorption, it does not eliminate it. For Grade 10.9/12.9 fasteners, baking is not optional.
+
+**Does zinc flake coating (Dacromet, Geomet) cause hydrogen embrittlement?**
+No. Zinc flake coatings are applied as a paint-like liquid film, baked to cure, and involve no electrodeposition or acid pickling. They are specifically used in applications where hydrogen embrittlement risk cannot be accepted — particularly Grade 12.9 fasteners with very thin cross-sections.
+
+**Can you test for embrittlement non-destructively?**
+Not reliably. This is one of the most challenging aspects of HE management. Current non-destructive methods (infrared, acoustic emission) are research-grade tools, not production inspection methods. Quality assurance for HE depends on **process control** (correct procedure, verified bake) and **periodic destructive testing** (ASTM F519) — not 100% inspection of finished parts.
+
+**How do I specify HE relief on engineering drawings?**
+Add a plating note: _"Post-plate hydrogen embrittlement relief baking required per ASTM F1941 / IS 1573: 190°C minimum for 8 hours, to be performed within 1 hour of plating. Applicable to all parts with hardness > 320 HV."_
+
+---
+
+_Supplying high-strength fasteners or critical steel components for plating? [Talk to Platinex's engineering team](/contact) about our documented HE relief baking process and test certificates._

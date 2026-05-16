@@ -1,0 +1,224 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { Image } from 'astro:assets'
+import heroImage from '../../assets/images/zinc_plating_hardware.png'
+import CheckIcon from '../../components/icons/CheckIcon.astro'
+
+const schema = {
+	'@context': 'https://schema.org',
+	'@type': 'Service',
+	name: 'Automotive Electroplating Services',
+	provider: {
+		'@type': 'LocalBusiness',
+		name: 'Platinex Industries Private Limited',
+		address: {
+			'@type': 'PostalAddress',
+			addressLocality: 'Nashik',
+			addressRegion: 'Maharashtra',
+			addressCountry: 'IN'
+		}
+	},
+	description:
+		'High-performance Zinc and Zinc Alloy plating for the automotive industry. Providing exceptional corrosion resistance for fasteners, chassis components, and under-the-hood parts. Strict RoHS compliance.',
+	areaServed: ['Nashik', 'Pune', 'Aurangabad', 'Maharashtra', 'India'],
+	serviceType: 'Industrial Automotive Plating'
+}
+---
+
+<BaseLayout
+	title='Automotive Zinc Plating & Surface Finishing | Platinex'
+	description='High-performance, RoHS compliant Zinc and Zinc-Nickel alloy electroplating for automotive fasteners and chassis components. Nashik & Pune, India.'
+>
+	<script type='application/ld+json' set:html={JSON.stringify(schema)} />
+
+	<div class='mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8'>
+		<div class='grid gap-12 md:gap-16 pb-16'>
+			<!-- Breadcrumb -->
+			<nav class='text-sm text-stone-500 dark:text-stone-400 mt-8' aria-label='Breadcrumb'>
+				<ol class='flex items-center gap-2'>
+					<li><a href='/' class='hover:text-accent transition-colors'>Home</a></li>
+					<li>/</li>
+					<li><a href='/industries' class='hover:text-accent transition-colors'>Industries</a></li>
+					<li>/</li>
+					<li class='text-stone-900 dark:text-white font-medium'>Automotive & Fasteners</li>
+				</ol>
+			</nav>
+
+			<!-- Hero Section -->
+			<div
+				class='rounded-2xl md:rounded-3xl overflow-hidden ring-1 ring-stone-200/70 dark:ring-white/10 bg-gradient-to-br from-stone-50 to-stone-100 dark:from-stone-900/50 dark:to-stone-800/50 min-h-[400px] md:min-h-[500px] flex flex-col justify-center'
+			>
+				<div class='flex flex-col md:flex-row items-stretch h-full'>
+					<div class='flex-1 p-6 md:p-14 flex flex-col justify-center'>
+						<div
+							class='w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-6 text-accent'
+						>
+							<svg class='w-8 h-8' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+								<path
+									stroke-linecap='round'
+									stroke-linejoin='round'
+									stroke-width='2'
+									d='M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z'
+								></path>
+								<path
+									stroke-linecap='round'
+									stroke-linejoin='round'
+									stroke-width='2'
+									d='M15 12a3 3 0 11-6 0 3 3 0 016 0z'></path>
+							</svg>
+						</div>
+						<h1 class='text-4xl md:text-5xl font-extrabold leading-tight tracking-tight mb-4'>
+							Electroplating for <span class='text-accent'>Automotive Components</span>
+						</h1>
+						<p class='text-lg text-stone-700 dark:text-stone-300 max-w-xl mb-8'>
+							High-performance, RoHS-compliant Zinc and Zinc alloy finishes engineered to withstand
+							brutal under-the-hood environments and provide maximum salt-spray corrosion
+							resistance.
+						</p>
+						<div class='flex flex-wrap gap-4'>
+							<a
+								href='/#contact'
+								class='px-6 py-3 rounded-lg bg-accent text-white font-semibold hover:bg-accent/90 transition-colors'
+								>Request Technical Quote</a
+							>
+						</div>
+					</div>
+					<div class='flex-1 w-full min-h-[300px] relative hidden md:block'>
+						<Image
+							src={heroImage}
+							alt='Zinc plated automotive fasteners'
+							class='absolute inset-0 w-full h-full object-cover'
+							width={800}
+							height={600}
+							loading='eager'
+						/>
+						<div
+							class='absolute inset-0 bg-gradient-to-r from-stone-50 dark:from-stone-900 via-transparent to-transparent'
+						>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Key Finishes -->
+			<section class='grid gap-8'>
+				<h2 class='text-2xl md:text-3xl font-bold tracking-tight'>
+					Automotive Grade Surface Finishes
+				</h2>
+				<div class='grid md:grid-cols-2 gap-6'>
+					<a
+						href='/services/zinc-plating'
+						class='group rounded-xl md:rounded-2xl border border-stone-200 dark:border-white/10 bg-white/70 dark:bg-white/5 p-8 hover:border-accent transition-all'
+					>
+						<h3 class='text-2xl font-bold mb-3 group-hover:text-accent transition-colors'>
+							Alkaline Zinc Plating
+						</h3>
+						<p class='text-stone-600 dark:text-stone-400 mb-6'>
+							Provides exceptionally uniform thickness distribution, making it the superior choice
+							for complex automotive parts with deep recesses, tubular shapes, or blind holes.
+							Followed by hexavalent-free trivalent passivation (Blue/Clear or Yellow).
+						</p>
+						<span class='text-accent font-medium'>View Zinc Specs →</span>
+					</a>
+					<div
+						class='rounded-xl md:rounded-2xl border border-stone-200 dark:border-white/10 bg-white/70 dark:bg-white/5 p-8'
+					>
+						<h3 class='text-2xl font-bold mb-3'>Zinc-Nickel Alloy Plating</h3>
+						<p class='text-stone-600 dark:text-stone-400'>
+							The ultimate automotive standard for corrosion protection. Zinc-Nickel provides 5x to
+							10x the corrosion resistance of standard zinc, easily exceeding 1,000+ hours in salt
+							spray testing (ASTM B117) before red rust appears. Highly resistant to high engine
+							temperatures.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Applications & Compliance -->
+			<section class='grid md:grid-cols-2 gap-8'>
+				<div
+					class='rounded-2xl bg-stone-50 dark:bg-white/5 p-8 border border-stone-200 dark:border-white/10'
+				>
+					<h3 class='text-2xl font-bold mb-6'>Component Applications</h3>
+					<ul class='space-y-4 text-stone-700 dark:text-stone-300'>
+						<li class='flex items-start gap-3'>
+							<CheckIcon class='w-6 h-6 text-accent flex-shrink-0 mt-0.5' />
+							<span>High-tensile fasteners (Nuts, Bolts, Screws)</span>
+						</li>
+						<li class='flex items-start gap-3'>
+							<CheckIcon class='w-6 h-6 text-accent flex-shrink-0 mt-0.5' />
+							<span>Brake calipers and chassis components</span>
+						</li>
+						<li class='flex items-start gap-3'>
+							<CheckIcon class='w-6 h-6 text-accent flex-shrink-0 mt-0.5' />
+							<span>Fuel system tubing and brackets</span>
+						</li>
+						<li class='flex items-start gap-3'>
+							<CheckIcon class='w-6 h-6 text-accent flex-shrink-0 mt-0.5' />
+							<span>Under-the-hood engine mounts and stampings</span>
+						</li>
+						<li class='flex items-start gap-3'>
+							<CheckIcon class='w-6 h-6 text-accent flex-shrink-0 mt-0.5' />
+							<span>Wiper motor assemblies</span>
+						</li>
+					</ul>
+				</div>
+				<div
+					class='rounded-2xl bg-stone-50 dark:bg-white/5 p-8 border border-stone-200 dark:border-white/10'
+				>
+					<h3 class='text-2xl font-bold mb-6'>OEM Quality & Compliance</h3>
+					<ul class='space-y-4 text-stone-700 dark:text-stone-300'>
+						<li class='flex items-start gap-3'>
+							<CheckIcon class='w-6 h-6 text-accent flex-shrink-0 mt-0.5' />
+							<span
+								><strong>Hydrogen Embrittlement Relief:</strong> Dedicated baking ovens for post-plate
+								stress relief of high-tensile fasteners.</span>
+						</li>
+						<li class='flex items-start gap-3'>
+							<CheckIcon class='w-6 h-6 text-accent flex-shrink-0 mt-0.5' />
+							<span
+								><strong>Trivalent Passivates (Cr3+):</strong> 100% RoHS, REACH, and ELV directive compliant.
+								No Hexavalent Chromium (Cr6+).</span>
+						</li>
+						<li class='flex items-start gap-3'>
+							<CheckIcon class='w-6 h-6 text-accent flex-shrink-0 mt-0.5' />
+							<span
+								><strong>Salt Spray Testing:</strong> In-house quality control to guarantee ASTM B117
+								standards are met.</span>
+						</li>
+						<li class='flex items-start gap-3'>
+							<CheckIcon class='w-6 h-6 text-accent flex-shrink-0 mt-0.5' />
+							<span
+								><strong>Topcoats & Torque Control:</strong> Application of silane sealers and friction-modifiers
+								(lubricants) for precise torque-tension relationships.</span>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- CTA -->
+			<div class='rounded-2xl border border-accent/30 bg-accent/5 p-8 md:p-12 text-center'>
+				<h2 class='text-2xl md:text-3xl font-bold mb-4'>
+					Tier 1 & Tier 2 Auto Supplier Capabilities
+				</h2>
+				<p class='text-stone-600 dark:text-stone-400 mb-8 max-w-2xl mx-auto text-lg'>
+					We offer high-volume rack and barrel plating lines capable of meeting the stringent PPAP
+					documentation, lot traceability, and delivery schedules required by modern automotive
+					supply chains.
+				</p>
+				<div class='flex flex-wrap justify-center gap-4'>
+					<a
+						href='mailto:platinexindustries@gmail.com'
+						class='px-8 py-4 rounded-lg bg-accent text-white font-semibold hover:bg-accent/90 transition-colors shadow-lg shadow-accent/20'
+						>Discuss Automotive Specs</a
+					>
+					<a
+						href='tel:+918600146841'
+						class='px-8 py-4 rounded-lg border-2 border-stone-300 dark:border-stone-700 font-semibold hover:border-accent hover:text-accent transition-colors bg-white dark:bg-stone-900'
+						>Call: +91 86001 46841</a
+					>
+				</div>
+			</div>
+		</div>
+	</div>
+</BaseLayout>

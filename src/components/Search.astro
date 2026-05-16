@@ -11,15 +11,32 @@ import SearchIcon from '@/components/icons/SearchIcon'
 	</button>
 	<dialog
 		aria-label='search'
-		class='h-full max-h-full w-full max-w-full border border-zinc-400 bg-white dark:bg-[#0a0910ec] shadow backdrop:backdrop-blur sm:mx-auto sm:mb-auto sm:mt-16 sm:h-max sm:max-h-[calc(100%-8rem)] sm:min-h-[15rem] sm:w-5/6 sm:max-w-[48rem] sm:rounded-md opacity-0'
+		class='fixed inset-0 z-[100] m-0 h-full max-h-screen w-full max-w-full border-none bg-white dark:bg-stone-900 shadow-2xl sm:inset-auto sm:left-1/2 sm:top-16 sm:h-max sm:max-h-[calc(100%-8rem)] sm:min-h-[15rem] sm:w-5/6 sm:max-w-[48rem] sm:-translate-x-1/2 sm:rounded-2xl opacity-0'
 	>
-		<div class='dialog-frame flex flex-col gap-4 p-6 pt-12 sm:pt-6'>
-			<button
-				data-close-modal
-				class='ms-auto cursor-pointer rounded-full bg-black text-white px-4 py-2 dark:bg-white dark:text-black'
-				>Close</button
-			>
-			<div class='search-container dark:text-white'>
+		<div class='dialog-frame flex flex-col h-full p-4 sm:p-6'>
+			<div class='flex items-center justify-between mb-6'>
+				<h2 class='text-xl font-bold text-stone-900 dark:text-white'>Search</h2>
+				<button
+					data-close-modal
+					class='p-2 rounded-full hover:bg-stone-100 dark:hover:bg-white/5 transition-colors text-stone-500 dark:text-stone-400'
+					aria-label='Close search'
+				>
+					<svg
+						xmlns='http://www.w3.org/2000/svg'
+						class='h-6 w-6'
+						fill='none'
+						viewBox='0 0 24 24'
+						stroke='currentColor'
+					>
+						<path
+							stroke-linecap='round'
+							stroke-linejoin='round'
+							stroke-width='2'
+							d='M6 18L18 6M6 6l12 12'></path>
+					</svg>
+				</button>
+			</div>
+			<div class='search-container dark:text-white overflow-y-auto'>
 				<div id='pagefind__search'></div>
 			</div>
 		</div>
@@ -118,10 +135,10 @@ import SearchIcon from '@/components/icons/SearchIcon'
 
 <style is:global>
 	.dark {
-		--pagefind-ui-primary: #eeeeee;
-		--pagefind-ui-text: #eeeeee;
-		--pagefind-ui-background: #152028;
-		--pagefind-ui-border: #152028;
-		--pagefind-ui-tag: #152028;
+		--pagefind-ui-primary: #f5f5f4; /* stone-100 */
+		--pagefind-ui-text: #f5f5f4; /* stone-100 */
+		--pagefind-ui-background: #1c1917; /* stone-900 */
+		--pagefind-ui-border: #292524; /* stone-800 */
+		--pagefind-ui-tag: #292524; /* stone-800 */
 	}
 </style>

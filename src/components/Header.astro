@@ -4,38 +4,106 @@ import MenuIcon from './icons/MenuIcon.astro'
 import Search from './Search.astro'
 import ToggleTheme from './ToggleTheme.astro'
 import PlatinexLogo from './icons/PlatinexLogo.astro'
+import CloseIcon from './icons/CloseIcon.astro'
 import { SOCIALNETWORKS } from '../data/links'
 ---
 
 <header
-	class='relative flex items-center h-16 font-semibold bg-white/80 dark:bg-stone-900/80 backdrop-blur-sm border-b border-stone-200 dark:border-white/10 px-6'
+	class='sticky top-0 z-50 flex items-center h-16 font-semibold bg-white/90 dark:bg-stone-900/90 backdrop-blur-md border-b border-stone-200 dark:border-white/10 px-4 md:px-8'
 >
-	<a class='text-base md:text-lg mr-auto hover:text-accent transition-colors' href='/'>
+	<a class='flex-shrink-0 mr-auto hover:opacity-90 transition-opacity' href='/'>
 		<PlatinexLogo />
 	</a>
-	<a class='text-base md:text-lg ml-6 hover:text-accent transition-colors' href='/blog'>Blog</a>
-	<a class='text-base md:text-lg ml-6 hover:text-accent transition-colors' href='/services'
-		>Services</a
-	>
 
-	<div
-		id='astro-header-drawer'
-		class='shadow rounded-l-lg md:bg-transparent dark:md:bg-transparent bg-white dark:bg-[#0a0910] md:shadow-none md:rounded-none md:border-none md:h-auto md:static absolute transition-transform duration-300 ease-in translate-x-96 md:translate-x-0 top-16 -right-5 pl-4 pt-6 pb-4 md:p-0 h-[200px] w-[200px] z-50'
-	>
-		<nav
-			class='flex h-full flex-col justify-between gap-12 text-left md:flex-row md:w-full md:gap-5'
+	<!-- Desktop Navigation -->
+	<nav class='hidden md:flex items-center gap-8 mr-8'>
+		<a class='text-sm lg:text-base hover:text-accent transition-colors' href='/services'>Services</a
 		>
-			<div
-				class='flex flex-col gap-4 md:flex-row md:border-r border-stone-200 dark:border-white/10 pr-4'
-			>
-				<!-- Tags link removed as requested -->
-			</div>
+		<a class='text-sm lg:text-base hover:text-accent transition-colors' href='/industries'
+			>Industries</a
+		>
+		<a class='text-sm lg:text-base hover:text-accent transition-colors' href='/quality-assurance'
+			>Quality</a
+		>
+		<a class='text-sm lg:text-base hover:text-accent transition-colors' href='/blog'>Blog</a>
+	</nav>
 
-			<div class='flex justify-center items-center md:justify-end gap-3 md:p-0'>
+	<div class='flex items-center gap-2 md:gap-4'>
+		<Search />
+		<ToggleTheme />
+		<button
+			id='astro-header-drawer-button'
+			type='button'
+			class='inline-flex items-center justify-center p-2 rounded-lg md:hidden hover:bg-stone-100 dark:hover:bg-white/5 transition-colors'
+			aria-label='Open Menu'
+		>
+			<MenuIcon />
+		</button>
+	</div>
+</header>
+
+<!-- Mobile Drawer Overlay -->
+<div
+	id='astro-header-drawer-overlay'
+	class='fixed inset-0 bg-stone-900/50 backdrop-blur-sm z-[60] md:hidden opacity-0 pointer-events-none transition-opacity duration-300'
+>
+</div>
+
+<!-- Mobile Drawer -->
+<div
+	id='astro-header-drawer'
+	class='fixed top-0 right-0 bottom-0 w-[280px] bg-white dark:bg-stone-950 z-[70] md:hidden translate-x-full transition-transform duration-300 ease-in-out shadow-2xl border-l border-stone-200 dark:border-white/10'
+>
+	<div class='flex flex-col h-full p-6'>
+		<div class='flex items-center justify-between mb-8'>
+			<span class='text-xl font-bold text-accent'>Menu</span>
+			<button
+				id='astro-header-drawer-close'
+				type='button'
+				class='p-2 rounded-lg hover:bg-stone-100 dark:hover:bg-white/5 transition-colors'
+				aria-label='Close Menu'
+			>
+				<CloseIcon />
+			</button>
+		</div>
+
+		<nav class='flex flex-col gap-6 text-lg'>
+			<a
+				href='/'
+				class='hover:text-accent transition-colors py-2 border-b border-stone-100 dark:border-white/5'
+				>Home</a
+			>
+			<a
+				href='/services'
+				class='hover:text-accent transition-colors py-2 border-b border-stone-100 dark:border-white/5'
+				>Services</a
+			>
+			<a
+				href='/industries'
+				class='hover:text-accent transition-colors py-2 border-b border-stone-100 dark:border-white/5'
+				>Industries</a
+			>
+			<a
+				href='/quality-assurance'
+				class='hover:text-accent transition-colors py-2 border-b border-stone-100 dark:border-white/5'
+				>Quality</a
+			>
+			<a
+				href='/blog'
+				class='hover:text-accent transition-colors py-2 border-b border-stone-100 dark:border-white/5'
+				>Blog</a
+			>
+		</nav>
+
+		<div class='mt-auto pt-8'>
+			<p class='text-sm text-stone-500 dark:text-stone-400 mb-4 uppercase tracking-wider font-bold'>
+				Connect With Us
+			</p>
+			<div class='flex gap-4'>
 				{
 					SOCIALNETWORKS.map((network) => (
 						<HeaderLink
-							class='hover:text-accent transition-colors'
+							class='p-2 rounded-full bg-stone-100 dark:bg-white/5 hover:text-accent transition-all'
 							href={network.url}
 							target='_blank'
 							aria-label={network.name}
@@ -45,32 +113,24 @@ import { SOCIALNETWORKS } from '../data/links'
 					))
 				}
 			</div>
-		</nav>
-	</div>
-
-	<div class='flex items-center gap-3 md:pl-3' transition:persist='navbar'>
-		<div>
-			<Search />
 		</div>
-		<ToggleTheme />
-		<button id='astro-header-drawer-button' type='button' class='md:ml-6 md:hidden'>
-			<MenuIcon />
-			<span class='sr-only'>Show Menu</span>
-		</button>
 	</div>
-</header>
-<script>
-	document.addEventListener('click', (event) => {
-		const menu = document.getElementById('astro-header-drawer')
-		const menuButton = document.getElementById('astro-header-drawer-button')
-		const isClickInside =
-			menu?.contains(event.target as HTMLDivElement) ||
-			menuButton?.contains(event.target as HTMLButtonElement)
+</div>
 
-		if (isClickInside) {
-			menu?.classList.toggle('translate-x-96')
-		} else {
-			menu?.classList.add('translate-x-96')
-		}
-	})
+<script>
+	const menuButton = document.getElementById('astro-header-drawer-button')
+	const closeButton = document.getElementById('astro-header-drawer-close')
+	const menu = document.getElementById('astro-header-drawer')
+	const overlay = document.getElementById('astro-header-drawer-overlay')
+
+	function toggleMenu() {
+		menu?.classList.toggle('translate-x-full')
+		overlay?.classList.toggle('opacity-0')
+		overlay?.classList.toggle('pointer-events-none')
+		document.body.classList.toggle('overflow-hidden')
+	}
+
+	menuButton?.addEventListener('click', toggleMenu)
+	closeButton?.addEventListener('click', toggleMenu)
+	overlay?.addEventListener('click', toggleMenu)
 </script>

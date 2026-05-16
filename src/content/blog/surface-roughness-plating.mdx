@@ -1,0 +1,75 @@
+---
+heroImage: ../../assets/images/nickel_plating_components.png
+category: Technical Guides
+title: 'How Surface Roughness (Ra) Affects Plating Adhesion and Appearance'
+description: 'Electroplating does not hide bad machining; it magnifies it. Learn how the Ra (Roughness Average) of your substrate impacts plating thickness distribution, corrosion resistance, and final cosmetics.'
+pubDate: 2026-05-18T10:30:00.000Z
+tags:
+  - surface-roughness
+  - ra-value
+  - plating-adhesion
+  - surface-preparation
+---
+
+A common misconception among junior engineers is that electroplating acts like a thick coat of paint—that a layer of nickel or zinc will fill in deep machining grooves, hide scratches, and magically produce a smooth, shiny part from a rough casting.
+
+The reality is the exact opposite. **Electroplating generally magnifies surface defects.**
+
+The surface roughness of the raw substrate—typically measured as **Ra (Roughness Average)** in micrometers (\textµm) or microinches (\textµin)—dictates the success or failure of the plated part in three critical areas: Corrosion Resistance, Adhesion, and Aesthetics.
+
+---
+
+## 1. How Roughness Impacts Corrosion Resistance
+
+If you take two identical steel panels—one highly polished (Ra 0.2 \textµm) and one heavily sandblasted (Ra 6.0 \textµm)—and plate them both with 10 \text µm of zinc, the rough panel will rust in the salt spray chamber in a fraction of the time it takes the smooth panel to fail. Why?
+
+### The "True Surface Area" Problem
+
+A highly textured, rough surface has a massive microscopic surface area, consisting of deep valleys and sharp peaks.
+When you specify a "10 \text µm plating thickness," the plater calculates the electrical current required based on the _macroscopic_ flat surface area of the part. Because the rough part has 3 to 4 times the _microscopic_ surface area, that 10 \text µm of zinc is spread incredibly thin, struggling to cover the vast landscape of peaks and valleys.
+
+### The Peak Exposure Problem
+
+Electroplating is driven by electricity, and electricity loves sharp points. The current will concentrate heavily on the microscopic peaks of the rough surface, plating them thickly, while starving the microscopic valleys. The plating in the valleys may only be 1-2 \text µm thick, creating an immediate failure point for corrosion to penetrate.
+
+---
+
+## 2. How Roughness Impacts Adhesion
+
+While a rough surface is terrible for corrosion resistance, a surface that is _too smooth_ can sometimes struggle with adhesion.
+
+Electroplating relies primarily on atomic metallic bonding, but it also benefits immensely from mechanical "keying" or "tooth."
+
+- **Too Smooth (Ra < 0.1 \textµm):** Highly polished, mirror-like surfaces provide very little physical surface area for the plating to grip. If the chemical activation (acid pickling) is not absolutely flawless, the plating may peel under high stress or thermal cycling.
+- **The Sweet Spot (Ra 0.4 - 1.6 \textµm):** Standard CNC turning or milling finishes provide excellent mechanical tooth for the plating to anchor into, while still being smooth enough to avoid the corrosion issues mentioned above.
+
+---
+
+## 3. How Roughness Impacts Aesthetics
+
+If you want a part to look like a mirror, the raw metal must look close to a mirror before it goes into the plating tank.
+
+### The Magnification Effect
+
+If a part has a distinct, repeating lathe-turning groove (e.g., Ra 3.2 \textµm), a standard 10 \text µm layer of zinc or matte tin will simply follow the exact contour of that groove. The final plated part will look exactly like a grooved, machined part, just silver-colored.
+
+### The Exception: "Leveling" Plating Baths
+
+There are specific plating baths engineered specifically to hide surface roughness. This is called **Leveling Power**.
+
+- **Acid Copper and Bright Nickel** are the champions of leveling. The organic brighteners in these baths are engineered to temporarily block the high-current microscopic peaks, forcing the metal to deposit exclusively in the microscopic valleys.
+- A heavy layer of Acid Copper (20 \text µm) followed by Bright Nickel (15 \text µm) can take a relatively rough steel stamping (Ra 1.5 \textµm) and "level" it down to a near-flawless, mirror-like finish (Ra 0.1 \textµm).
+
+However, this requires thick, expensive, multi-layer plating. It is almost always more cost-effective to mechanically polish the part prior to plating than to rely on chemistry to fill in the canyons left by a dull cutting tool.
+
+---
+
+## Designing for the Finish
+
+When specifying surface roughness on a drawing, consider the final plating:
+
+1. **For Functional Zinc/Tin (Corrosion/Solderability):** Aim for a standard machined finish of **Ra 0.8 to 1.6 \textµm** (32 to 63 \textµin). This provides great adhesion and ensures the plating thickness is uniform.
+2. **For Hard Chrome:** Hard chrome has negative leveling power (it creates "nodules" on peaks, making rough parts rougher). The base metal must be ground very smooth (**Ra 0.2 to 0.4 \textµm**) prior to hard chrome plating.
+3. **For Decorative Bright Nickel/Chrome:** If you are not paying for heavy mechanical polishing, ensure the raw stampings or machined parts are kept as smooth as possible (**Ra < 0.8 \textµm**) so the Acid Copper layer can successfully level the remaining defects.
+
+_At Platinex Industries, we evaluate the raw surface finish of every incoming batch to ensure our plating parameters match the substrate condition. [Contact our team](/contact) to discuss how your machining tolerances will interact with our electroplating processes._

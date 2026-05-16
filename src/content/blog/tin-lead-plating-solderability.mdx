@@ -1,0 +1,87 @@
+---
+heroImage: ../../assets/images/copper_plated_bus_bars.png
+category: Technical Guides
+title: 'Tin-Lead Plating for Solderability: Process and RoHS Considerations'
+description: 'A technical review of Tin-Lead (Sn-Pb) electroplating. Understand why this legacy alloy provides the ultimate solderable surface, why it suppresses tin whiskers, and how aerospace and military sectors navigate RoHS exemptions.'
+pubDate: 2026-05-18T07:30:00.000Z
+tags:
+  - tin-lead-plating
+  - solderability
+  - tin-whiskers
+  - aerospace-plating
+---
+
+In the vast majority of commercial and consumer electronics manufactured today, you will not find a trace of lead. The European Union's RoHS Directive (Restriction of Hazardous Substances), implemented in 2006, forced the global supply chain to transition entirely to lead-free solders and pure tin electroplating for PCB components and connectors.
+
+However, if you inspect the avionics of a commercial airliner, the guidance system of a military missile, or a deep-space satellite, you will almost certainly find **Tin-Lead (Sn-Pb) electroplating**.
+
+Why does the high-reliability sector stubbornly refuse to abandon lead? The answer lies in the physics of solderability and the catastrophic danger of tin whiskers.
+
+---
+
+## Why Tin-Lead is the Ultimate Solderable Finish
+
+Electroplating a component with a Tin-Lead alloy (typically 60% Tin / 40% Lead or 90% Tin / 10% Lead) creates the perfect surface for subsequent soldering operations.
+
+### 1. Near-Perfect Wetting
+
+When a wave soldering machine or a hand-soldering iron applies molten solder to a PCB pad or a component lead, the solder must "wet" the surface—spreading out evenly and forming a strong intermetallic bond. Tin-Lead plating melts at exactly the same temperature as traditional Sn-Pb solder (the eutectic point is 183°\textC). The molten solder essentially fuses perfectly with the plated layer, ensuring a flawless, void-free joint.
+
+### 2. Lower Soldering Temperatures
+
+Pure tin plating and modern lead-free solders (like SAC305) require much higher temperatures to melt and flow (typically 217°\textC - 227°\textC). This higher thermal stress can damage delicate semiconductor dies, warp printed circuit boards, and degrade plastic connector housings. Tin-Lead plating allows assembly at much safer, lower temperatures.
+
+### 3. Extended Shelf Life
+
+Pure tin plating oxidizes over time, especially in humid environments, which dramatically reduces its solderability if the components are stored for months or years before assembly. The addition of lead to the matrix significantly retards oxidation, allowing Tin-Lead plated components to remain highly solderable after years in storage.
+
+---
+
+## The Primary Reason: Tin Whisker Suppression
+
+The most critical reason aerospace and defense industries insist on Tin-Lead plating has nothing to do with how easy it is to solder. It is about preventing catastrophic failure.
+
+Pure tin electroplating is under constant internal compressive stress. Over time (weeks, months, or years), the tin relieves this stress by spontaneously growing microscopic, hair-like crystals called **Tin Whiskers**.
+
+- These whiskers can grow up to several millimeters long.
+- They are electrically conductive.
+- They grow in a vacuum (like outer space).
+
+If a tin whisker grows between two adjacent pins on a microchip, it creates a dead short. Tin whiskers have caused the loss of multi-million dollar commercial satellites, shut down nuclear power plant control systems, and caused false alarms in missile defense systems.
+
+### How Lead Solves the Problem
+
+Extensive metallurgical research has proven that adding just a small amount of lead (typically a minimum of 3% by weight) to the tin plating bath fundamentally alters the crystal structure of the deposit and relieves the compressive stress. **A Tin-Lead alloy containing at least 3% Lead is essentially immune to tin whisker growth.**
+
+For applications where a short circuit means loss of life or a multi-million dollar mission failure, pure tin is deemed an unacceptable risk.
+
+---
+
+## RoHS Exemptions and Military Specifications
+
+Because of the severe toxicity of lead and the environmental damage caused by improper disposal of e-waste, RoHS strictly limits lead in consumer electronics.
+
+However, the directive includes specific, permanent exemptions for high-reliability sectors. You are legally permitted (and often contractually required) to use Tin-Lead plating and solder in:
+
+- **Military and Defense hardware**
+- **Aerospace and Avionics**
+- **Medical devices (specifically implanted devices or critical life support)**
+- **Telecommunications infrastructure (server backplanes)**
+
+### The Plating Specifications
+
+When supplying to these sectors, strict military specifications must be followed:
+
+- **MIL-P-81728:** The standard military specification for Tin-Lead electroplating. It dictates the ratio of tin to lead (usually specifying a minimum of 3% or 5% lead to guarantee whisker suppression) and the required thickness (typically 8 - 12 \text µm for general solderability).
+
+---
+
+## The Plating Process: Methanesulfonic Acid (MSA)
+
+Historically, Tin-Lead was plated out of highly toxic fluoborate baths. Today, modern high-reliability plating shops utilize **Methanesulfonic Acid (MSA)** based electrolytes.
+
+The MSA bath allows for precise control over the co-deposition ratio of Tin and Lead. By adjusting the concentration of metal salts and utilizing specific organic additives, the plater can deposit an exact 60/40 or 90/10 alloy. Strict analytical control and regular XRF (X-ray Fluorescence) testing are required to prove to aerospace contractors that the minimum lead content requirement has been met to guarantee whisker suppression.
+
+---
+
+_At Platinex Industries, we focus heavily on RoHS-compliant surface finishing for the commercial and automotive sectors, utilizing pure matte tin (which has vastly lower whisker risk than bright tin) over a nickel barrier layer. However, understanding the critical metallurgical role of lead is essential for any engineer designing high-reliability electronics._

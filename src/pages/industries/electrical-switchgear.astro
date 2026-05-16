@@ -1,0 +1,224 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import { Image } from 'astro:assets'
+import heroImage from '../../assets/images/copper_plated_bus_bars.png'
+import CheckIcon from '../../components/icons/CheckIcon.astro'
+
+const schema = {
+	'@context': 'https://schema.org',
+	'@type': 'Service',
+	name: 'Electrical & Switchgear Plating Services',
+	provider: {
+		'@type': 'LocalBusiness',
+		name: 'Platinex Industries Private Limited',
+		address: {
+			'@type': 'PostalAddress',
+			addressLocality: 'Nashik',
+			addressRegion: 'Maharashtra',
+			addressCountry: 'IN'
+		}
+	},
+	description:
+		'High-conductivity Silver, Tin, and Copper electroplating services for electrical contacts, switchgears, and busbars. Minimizing contact resistance and ensuring maximum power transmission efficiency.',
+	areaServed: ['Nashik', 'Pune', 'Mumbai', 'Maharashtra', 'India'],
+	serviceType: 'Industrial Electroplating'
+}
+---
+
+<BaseLayout
+	title='Electroplating for Electrical Switchgear & Contacts | Platinex'
+	description='High-conductivity Silver, Tin, and Copper plating for switchgear components, busbars, and electrical contacts in Nashik, India. Reduce contact resistance.'
+>
+	<script type='application/ld+json' set:html={JSON.stringify(schema)} />
+
+	<div class='mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8'>
+		<div class='grid gap-12 md:gap-16 pb-16'>
+			<!-- Breadcrumb -->
+			<nav class='text-sm text-stone-500 dark:text-stone-400 mt-8' aria-label='Breadcrumb'>
+				<ol class='flex items-center gap-2'>
+					<li><a href='/' class='hover:text-accent transition-colors'>Home</a></li>
+					<li>/</li>
+					<li><a href='/industries' class='hover:text-accent transition-colors'>Industries</a></li>
+					<li>/</li>
+					<li class='text-stone-900 dark:text-white font-medium'>Electrical & Switchgear</li>
+				</ol>
+			</nav>
+
+			<!-- Hero Section -->
+			<div
+				class='rounded-2xl md:rounded-3xl overflow-hidden ring-1 ring-stone-200/70 dark:ring-white/10 bg-gradient-to-br from-stone-50 to-stone-100 dark:from-stone-900/50 dark:to-stone-800/50 min-h-[400px] md:min-h-[500px] flex flex-col justify-center'
+			>
+				<div class='flex flex-col md:flex-row items-stretch h-full'>
+					<div class='flex-1 p-6 md:p-14 flex flex-col justify-center'>
+						<div
+							class='w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-6 text-accent'
+						>
+							<svg class='w-8 h-8' fill='none' viewBox='0 0 24 24' stroke='currentColor'>
+								<path
+									stroke-linecap='round'
+									stroke-linejoin='round'
+									stroke-width='2'
+									d='M13 10V3L4 14h7v7l9-11h-7z'></path>
+							</svg>
+						</div>
+						<h1 class='text-4xl md:text-5xl font-extrabold leading-tight tracking-tight mb-4'>
+							Electroplating for <span class='text-accent'>Electrical Switchgear</span>
+						</h1>
+						<p class='text-lg text-stone-700 dark:text-stone-300 max-w-xl mb-8'>
+							Precision Silver, Tin, and Copper surface finishes engineered to maximize electrical
+							conductivity, minimize contact resistance, and prevent oxidation on critical power
+							transmission components.
+						</p>
+						<div class='flex flex-wrap gap-4'>
+							<a
+								href='/#contact'
+								class='px-6 py-3 rounded-lg bg-accent text-white font-semibold hover:bg-accent/90 transition-colors'
+								>Request Technical Quote</a
+							>
+						</div>
+					</div>
+					<div class='flex-1 w-full min-h-[300px] relative hidden md:block'>
+						<Image
+							src={heroImage}
+							alt='Copper plated electrical switchgear components'
+							class='absolute inset-0 w-full h-full object-cover'
+							width={800}
+							height={600}
+							loading='eager'
+						/>
+						<div
+							class='absolute inset-0 bg-gradient-to-r from-stone-50 dark:from-stone-900 via-transparent to-transparent'
+						>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Key Finishes -->
+			<section class='grid gap-8'>
+				<h2 class='text-2xl md:text-3xl font-bold tracking-tight'>
+					Specialized Finishes for the Electrical Industry
+				</h2>
+				<div class='grid md:grid-cols-3 gap-6'>
+					<a
+						href='/services/tin-plating'
+						class='group rounded-xl md:rounded-2xl border border-stone-200 dark:border-white/10 bg-white/70 dark:bg-white/5 p-6 hover:border-accent transition-all'
+					>
+						<h3 class='text-xl font-bold mb-2 group-hover:text-accent transition-colors'>
+							Tin Plating (Sn)
+						</h3>
+						<p class='text-sm text-stone-600 dark:text-stone-400 mb-4'>
+							Excellent solderability and protection against fretting corrosion. Ideal for copper
+							busbars, terminals, and connectors.
+						</p>
+						<span class='text-accent font-medium text-sm'>View Tin Specs →</span>
+					</a>
+					<a
+						href='/services/copper-plating'
+						class='group rounded-xl md:rounded-2xl border border-stone-200 dark:border-white/10 bg-white/70 dark:bg-white/5 p-6 hover:border-accent transition-all'
+					>
+						<h3 class='text-xl font-bold mb-2 group-hover:text-accent transition-colors'>
+							Copper Plating (Cu)
+						</h3>
+						<p class='text-sm text-stone-600 dark:text-stone-400 mb-4'>
+							High thermal and electrical conductivity. Often used as a highly conductive base layer
+							beneath silver or tin finishes.
+						</p>
+						<span class='text-accent font-medium text-sm'>View Copper Specs →</span>
+					</a>
+					<div
+						class='rounded-xl md:rounded-2xl border border-stone-200 dark:border-white/10 bg-white/70 dark:bg-white/5 p-6'
+					>
+						<h3 class='text-xl font-bold mb-2'>Silver Plating (Ag)</h3>
+						<p class='text-sm text-stone-600 dark:text-stone-400'>
+							The ultimate finish for high-voltage, high-amperage contacts requiring the absolute
+							lowest contact resistance and anti-galling properties.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Applications & Compliance -->
+			<section class='grid md:grid-cols-2 gap-8'>
+				<div
+					class='rounded-2xl bg-stone-50 dark:bg-white/5 p-8 border border-stone-200 dark:border-white/10'
+				>
+					<h3 class='text-2xl font-bold mb-6'>Core Applications</h3>
+					<ul class='space-y-4 text-stone-700 dark:text-stone-300'>
+						<li class='flex items-start gap-3'>
+							<CheckIcon class='w-6 h-6 text-accent flex-shrink-0 mt-0.5' />
+							<span>High & Medium Voltage Switchgears</span>
+						</li>
+						<li class='flex items-start gap-3'>
+							<CheckIcon class='w-6 h-6 text-accent flex-shrink-0 mt-0.5' />
+							<span>Copper & Aluminum Busbars</span>
+						</li>
+						<li class='flex items-start gap-3'>
+							<CheckIcon class='w-6 h-6 text-accent flex-shrink-0 mt-0.5' />
+							<span>Circuit Breaker Contacts & Terminals</span>
+						</li>
+						<li class='flex items-start gap-3'>
+							<CheckIcon class='w-6 h-6 text-accent flex-shrink-0 mt-0.5' />
+							<span>Isolators, Relays, and Disconnectors</span>
+						</li>
+						<li class='flex items-start gap-3'>
+							<CheckIcon class='w-6 h-6 text-accent flex-shrink-0 mt-0.5' />
+							<span>Transformer Components</span>
+						</li>
+					</ul>
+				</div>
+				<div
+					class='rounded-2xl bg-stone-50 dark:bg-white/5 p-8 border border-stone-200 dark:border-white/10'
+				>
+					<h3 class='text-2xl font-bold mb-6'>Engineering Compliance</h3>
+					<ul class='space-y-4 text-stone-700 dark:text-stone-300'>
+						<li class='flex items-start gap-3'>
+							<CheckIcon class='w-6 h-6 text-accent flex-shrink-0 mt-0.5' />
+							<span
+								><strong>RoHS & REACH Compliant:</strong> Hexavalent-free and lead-free finishes.</span>
+						</li>
+						<li class='flex items-start gap-3'>
+							<CheckIcon class='w-6 h-6 text-accent flex-shrink-0 mt-0.5' />
+							<span
+								><strong>ISO 9001 Quality:</strong> Strict adherence to thickness and adhesion standards.</span>
+						</li>
+						<li class='flex items-start gap-3'>
+							<CheckIcon class='w-6 h-6 text-accent flex-shrink-0 mt-0.5' />
+							<span
+								><strong>XRF Thickness Testing:</strong> Verifiable coating thickness to exact micrometer
+								tolerances.</span>
+						</li>
+						<li class='flex items-start gap-3'>
+							<CheckIcon class='w-6 h-6 text-accent flex-shrink-0 mt-0.5' />
+							<span
+								><strong>Thermal Cycling Resistance:</strong> Preventing flaking under extreme load variations.</span>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<!-- CTA -->
+			<div class='rounded-2xl border border-accent/30 bg-accent/5 p-8 md:p-12 text-center'>
+				<h2 class='text-2xl md:text-3xl font-bold mb-4'>
+					Partner with Platinex for Electrical Components
+				</h2>
+				<p class='text-stone-600 dark:text-stone-400 mb-8 max-w-2xl mx-auto text-lg'>
+					From prototyping small runs to dedicated large-scale OEM plating lines in Nashik, we have
+					the technical expertise to handle your most demanding electrical plating requirements.
+				</p>
+				<div class='flex flex-wrap justify-center gap-4'>
+					<a
+						href='mailto:platinexindustries@gmail.com'
+						class='px-8 py-4 rounded-lg bg-accent text-white font-semibold hover:bg-accent/90 transition-colors shadow-lg shadow-accent/20'
+						>Email Engineering Team</a
+					>
+					<a
+						href='tel:+918600146841'
+						class='px-8 py-4 rounded-lg border-2 border-stone-300 dark:border-stone-700 font-semibold hover:border-accent hover:text-accent transition-colors bg-white dark:bg-stone-900'
+						>Call: +91 86001 46841</a
+					>
+				</div>
+			</div>
+		</div>
+	</div>
+</BaseLayout>
