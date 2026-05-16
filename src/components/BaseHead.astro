@@ -101,18 +101,6 @@ const localBusinessSchema = {
 }
 ---
 
-<!-- Google tag (gtag.js) -->
-<script async src='https://www.googletagmanager.com/gtag/js?id=G-215RZNFPMY'></script>
-<script is:inline>
-	window.dataLayer = window.dataLayer || []
-	function gtag() {
-		dataLayer.push(arguments)
-	}
-	gtag('js', new Date())
-
-	gtag('config', 'G-215RZNFPMY')
-</script>
-
 <!-- Global Metadata -->
 <meta charset='utf-8' />
 <meta name='viewport' content='width=device-width,initial-scale=1' />
@@ -120,13 +108,49 @@ const localBusinessSchema = {
 <link rel='shortcut icon' type='image/png' href='/favicon.png' />
 <meta name='generator' content={Astro.generator} />
 
+<!-- Preconnects & DNS Prefetch -->
+<link rel='preconnect' href='https://www.googletagmanager.com' />
+<link rel='dns-prefetch' href='https://www.googletagmanager.com' />
+<link rel='preconnect' href='https://www.google-analytics.com' />
+<link rel='dns-prefetch' href='https://www.google-analytics.com' />
+
 <!-- Fonts: Inter (body) and Montserrat (headings) - Self-hosted -->
 <link rel='preload' href='/fonts/inter-400.woff2' as='font' type='font/woff2' crossorigin />
 <link rel='preload' href='/fonts/inter-500.woff2' as='font' type='font/woff2' crossorigin />
+<link rel='preload' href='/fonts/inter-600.woff2' as='font' type='font/woff2' crossorigin />
 <link rel='preload' href='/fonts/inter-700.woff2' as='font' type='font/woff2' crossorigin />
 <link rel='preload' href='/fonts/montserrat-600.woff2' as='font' type='font/woff2' crossorigin />
 <link rel='preload' href='/fonts/montserrat-700.woff2' as='font' type='font/woff2' crossorigin />
 <link rel='preload' href='/fonts/montserrat-800.woff2' as='font' type='font/woff2' crossorigin />
+
+<!-- Google tag (gtag.js) Lazy Load -->
+<script is:inline>
+	function loadGTM() {
+		if (window.gtmLoaded) return
+		window.gtmLoaded = true
+
+		const script = document.createElement('script')
+		script.async = true
+		script.src = 'https://www.googletagmanager.com/gtag/js?id=G-215RZNFPMY'
+		document.head.appendChild(script)
+
+		window.dataLayer = window.dataLayer || []
+		function gtag() {
+			dataLayer.push(arguments)
+		}
+		gtag('js', new Date())
+		gtag('config', 'G-215RZNFPMY')
+	}
+
+	// Load GTM on interaction or after a delay
+	const interactionEvents = ['mouseover', 'keydown', 'touchstart', 'touchmove', 'wheel']
+	interactionEvents.forEach((event) => {
+		window.addEventListener(event, loadGTM, { once: true, passive: true })
+	})
+
+	// Fallback to load after 3.5 seconds if no interaction
+	setTimeout(loadGTM, 3500)
+</script>
 
 <!-- Canonical URL -->
 <link rel='canonical' href={canonicalURL} />
